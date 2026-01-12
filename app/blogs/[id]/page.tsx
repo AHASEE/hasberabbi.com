@@ -1,72 +1,49 @@
-import { NextResponse } from 'next/server';
+import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/db';
-import { auth } from '@/lib/auth';
 
-// GET - Fetch all blogs
-export async function GET() {
-  try {
-    const blogs = await prisma.blog.findMany({
-      where: { published: true },
-      orderBy: { createdAt: 'desc' },
-      include: {
-        author: {
-          select: { name: true }
-        }
-      }
-    });
-    return NextResponse.json(blogs);
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch blogs' }, { status: 500 });
-  }
+interface BlogPageProps {
+  params: {
+    id: string;
+  };
 }
 
-// POST - Create new blog
-export async function POST(request: Request) {
-  try {
-    const session = await auth();
-    
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+export default async function BlogPage({ params }: BlogPageProps) {
+  const blog = await prisma.blog.findUnique({
+    where: {
+      id: params.id,
+    },
+    include: {
+      author: {
+        select: {
+          name: true,
+        },
+      },
+    },
+  });
 
-    const body = await request.json();
-    const { title, slug, content, excerpt, image, published, metaTitle, metaDesc } = body;
-
-    // Check if slug exists
-    const existingBlog = await prisma.blog.findUnique({
-      where: { slug }
-    });
-
-    if (existingBlog) {
-      return NextResponse.json({ error: 'Slug already exists' }, { status: 400 });
-    }
-
-    // Get user ID
-    const user = await prisma.user.findUnique({
-      where: { email: session.user.email! }
-    });
-
-    if (!user) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 });
-    }
-
-    const blog = await prisma.blog.create({
-      data: {
-        title,
-        slug,
-        content,
-        excerpt: excerpt || null,
-        image: image || null,
-        published: published || false,
-        metaTitle: metaTitle || null,
-        metaDesc: metaDesc || null,
-        authorId: user.id
-      }
-    });
-
-    return NextResponse.json(blog, { status: 201 });
-  } catch (error) {
-    console.error('Error creating blog:', error);
-    return NextResponse.json({ error: 'Failed to create blog' }, { status: 500 });
+  if (!blog || !blog.published) {
+    notFound();
   }
+
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-10">
+      <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+
+      <p className="text-sm text-gray-500 mb-6">
+        By {blog.author?.name ?? 'Admin'}
+      </p>
+
+      {blog.image && (
+        <img
+          src={blog.image}
+          alt={blog.title}
+          className="w-full rounded-lg mb-6"
+        />
+      )}
+
+      <article className="prose max-w-none">
+        {blog.content}
+      </article>
+    </main>
+  );
 }
