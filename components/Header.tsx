@@ -28,15 +28,15 @@ export default function Header() {
               md:flex-row md:gap-4 md:items-center
             "
           >
-            <a
-              href="mailto:haseebclubi@gmail.com"
+            
+             <a href="mailto:haseebclubi@gmail.com"
               className="flex items-center gap-1 hover:text-accent transition"
             >
               ✉️ <span className="break-all">haseebclubi@gmail.com</span>
             </a>
 
-            <a
-              href="tel:+923313954965"
+            
+              <a href="tel:+923313954965"
               className="flex items-center gap-1 hover:text-accent transition"
             >
               📞 <span>+92 331 3954965</span>
@@ -101,12 +101,15 @@ export default function Header() {
               <Link href="/hajj" className="text-gray-700 hover:text-primary font-medium transition">
                 Hajj Packages
               </Link>
+              <Link href="/visa" className="text-gray-700 hover:text-primary font-medium transition">
+                Visa Services
+              </Link>
               <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition">
                 Blog
               </Link>
 
-              <a
-                href="tel:+923313954965"
+              
+               <a href="tel:+923313954965"
                 className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-light transition"
               >
                 📞 +92 331 3954965
@@ -150,6 +153,14 @@ export default function Header() {
               </Link>
 
               <Link
+                href="/visa"
+                className="text-gray-700 hover:text-primary font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Visa Services
+              </Link>
+
+              <Link
                 href="/blog"
                 className="text-gray-700 hover:text-primary font-medium"
                 onClick={() => setIsMenuOpen(false)}
@@ -157,8 +168,8 @@ export default function Header() {
                 Blog
               </Link>
 
-              <a
-                href="tel:+923313954965"
+              
+               <a href="tel:+923313954965"
                 className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-center"
               >
                 📞 +92 331 3954965
