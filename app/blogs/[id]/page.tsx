@@ -33,13 +33,13 @@ export default async function BlogPage({ params }: BlogPageProps) {
         By {blog.author?.name ?? 'Admin'}
       </p>
 
-      {blog.image && (
+      {/* {blog.image && (
         <img
           src={blog.image}
           alt={blog.title}
           className="w-full rounded-lg mb-6"
         />
-      )}
+      )} */}
 
       <article className="prose max-w-none">
         {blog.content}

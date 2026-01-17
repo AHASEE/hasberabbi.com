@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { title, slug, content, excerpt, image, published, metaTitle, metaDesc } = body;
+    const { title, slug, content, excerpt, published, categoryId, countryId, language } = body;
 
     // Check if slug exists
     const existingBlog = await prisma.blog.findUnique({
@@ -56,10 +56,10 @@ export async function POST(request: Request) {
         slug,
         content,
         excerpt: excerpt || null,
-        image: image || null,
         published: published || false,
-        metaTitle: metaTitle || null,
-        metaDesc: metaDesc || null,
+        language: language || 'english',
+        categoryId,
+        countryId: countryId || null,
         authorId: user.id
       }
     });

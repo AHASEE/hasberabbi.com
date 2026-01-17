@@ -42,6 +42,8 @@ model Blog {
   slug       String   @unique
   content    String   @db.Text
   excerpt    String?
+  metaTitle  String?  
+  metaDesc   String?  
   language   String   @default("english")
   published  Boolean  @default(false)
   

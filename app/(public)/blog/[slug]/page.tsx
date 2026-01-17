@@ -1,6 +1,5 @@
 import { prisma } from '../../../../lib/db';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 
 export const revalidate = 60;
 
@@ -24,10 +23,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: 'Blog Not Found'
     };
   }
-
   return {
-    title: blog.metaTitle || blog.title,
-    description: blog.metaDesc || blog.excerpt,
+    title: blog.title,
+    description: blog.excerpt || 'Read our latest blog post',
   };
 }
 
@@ -65,24 +63,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </div>
       </section>
 
-      {/* Featured Image */}
-      {blog.image && (
-        <section className="relative -mt-8 z-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Featured Image - Removed (add image field to schema later) */}
 
       {/* Blog Content */}
       <section className="py-16">
@@ -97,15 +78,15 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             <div className="mt-16 pt-8 border-t border-gray-200">
               <h3 className="text-xl font-bold text-primary-dark mb-4">Share this article:</h3>
               <div className="flex gap-4">
-                <a
-                  href={`https://wa.me/?text=Check out this article: ${encodeURIComponent(blog.title)} https://daralsalam.pk/blog/${blog.slug}`}
+                
+                 <a href={`https://wa.me/?text=Check out this article: ${encodeURIComponent(blog.title)} https://hasberabbi.com/blog/${blog.slug}`}
                   target="_blank"
                   className="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition"
                 >
                   Share on WhatsApp
                 </a>
-                <a
-                  href={`https://www.facebook.com/sharer/sharer.php?u=https://daralsalam.pk/blog/${blog.slug}`}
+                
+                 <a href={`https://www.facebook.com/sharer/sharer.php?u=https://hasberabbi.com/blog/${blog.slug}`}
                   target="_blank"
                   className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
                 >
@@ -120,8 +101,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               <p className="text-xl mb-6 text-white/90">
                 Get personalized package recommendations and instant quotes
               </p>
-              <a
-                href="https://wa.me/923313954965?text=I want to book Umrah package"
+              
+               <a href="https://wa.me/923313954965?text=I want to book Umrah package"
                 target="_blank"
                 className="inline-block bg-accent hover:bg-accent-hover text-primary-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all"
               >
