@@ -30,7 +30,7 @@ export default async function AdminDashboard() {
     <div>
       <div className="mb-8">
         <h1 className="text-4xl font-extrabold text-primary-dark mb-2">Dashboard</h1>
-        <p className="text-gray-600">Welcome to Dar Al Salam Admin Panel</p>
+        <p className="text-gray-600">Welcome to HasbeRabbi Admin Panel</p>
       </div>
 
       {/* Stats Grid */}
