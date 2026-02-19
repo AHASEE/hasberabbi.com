@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
-import { revalidatePath } from 'next/cache';
+import DeleteBlogButton from '@/components/admin/DeleteBlogButton';
 
 export default async function AdminBlogsPage() {
   const blogs = await prisma.blog.findMany({
@@ -11,13 +11,6 @@ export default async function AdminBlogsPage() {
       }
     }
   });
-
-  async function deleteBlog(formData: FormData) {
-    'use server';
-    const id = formData.get('id') as string;
-    await prisma.blog.delete({ where: { id } });
-    revalidatePath('/admin/blogs');
-  }
 
   return (
     <div>
@@ -68,8 +61,8 @@ export default async function AdminBlogsPage() {
                   <td className="py-4 px-6 text-gray-600">{blog.author.name}</td>
                   <td className="py-4 px-6 text-center">
                     <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                      blog.published 
-                        ? 'bg-green-100 text-green-700' 
+                      blog.published
+                        ? 'bg-green-100 text-green-700'
                         : 'bg-yellow-100 text-yellow-700'
                     }`}>
                       {blog.published ? '✅ Published' : '📄 Draft'}
@@ -99,20 +92,8 @@ export default async function AdminBlogsPage() {
                       >
                         Edit
                       </Link>
-                      <form action={deleteBlog}>
-                        <input type="hidden" name="id" value={blog.id} />
-                        <button
-                          type="submit"
-                          onClick={(e) => {
-                            if (!confirm('Are you sure you want to delete this blog?')) {
-                              e.preventDefault();
-                            }
-                          }}
-                          className="text-red-600 hover:text-red-700 font-semibold text-sm"
-                        >
-                          Delete
-                        </button>
-                      </form>
+                      {/* ✅ Client Component - No onClick error */}
+                      <DeleteBlogButton blogId={blog.id} />
                     </div>
                   </td>
                 </tr>

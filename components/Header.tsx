@@ -29,7 +29,7 @@ export default function Header() {
             "
           >
             
-             <a href="mailto:haseebclubi@gmail.com"
+             <a href="mailto:haseebclubi33@gmail.com"
               className="flex items-center gap-1 hover:text-accent transition"
             >
               ✉️ <span className="break-all">haseebclubi@gmail.com</span>

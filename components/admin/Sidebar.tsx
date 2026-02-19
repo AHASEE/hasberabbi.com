@@ -5,14 +5,14 @@ export default async function Sidebar() {
   const session = await auth();
 
   return (
-    <aside className="w-64 bg-primary-dark text-white min-h-screen p-6 flex flex-col">
+    <aside className="w-64 bg-yellow-500 text-white min-h-screen p-6 flex flex-col">
       {/* Logo */}
       <div className="flex items-center gap-3 mb-10">
         <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl">
-          ☪
+      
         </div>
         <div>
-          <h2 className="font-bold text-lg">Dar Al Salam</h2>
+          <h2 className="font-bold text-lg">HasbeRabbi</h2>
           <p className="text-xs text-white/60">Admin Panel</p>
         </div>
       </div>
