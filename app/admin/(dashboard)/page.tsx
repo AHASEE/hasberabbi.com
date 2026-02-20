@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
+import DeleteBlogButton from '@/components/admin/DeleteBlogButton';
 
 export default async function AdminDashboard() {
   const [totalBlogs, publishedBlogs, draftBlogs] = await Promise.all([
@@ -99,12 +100,15 @@ export default async function AdminDashboard() {
                       {new Date(blog.createdAt).toLocaleDateString()}
                     </td>
                     <td className="py-4 px-4 text-center">
-                      <Link
-                        href={`/admin/blogs/${blog.id}/edit`}
-                        className="text-primary hover:text-primary-light font-semibold"
-                      >
-                        Edit
-                      </Link>
+                      <div className="flex items-center justify-center gap-3">
+                        <Link
+                          href={`/admin/blogs/${blog.id}/edit`}
+                          className="text-primary hover:text-primary-light font-semibold"
+                        >
+                          Edit
+                        </Link>
+                        <DeleteBlogButton blogId={blog.id} />
+                      </div>
                     </td>
                   </tr>
                 ))}
