@@ -181,7 +181,7 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} action="#" className="space-y-6">
         {/* Title */}
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-2">
