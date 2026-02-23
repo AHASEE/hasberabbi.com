@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { auth, signOut } from '@/lib/auth';
+import { auth } from '@/lib/auth';
+import LogoutButton from './LogoutButton';
 
 export default async function Sidebar() {
   const session = await auth();
@@ -47,20 +48,6 @@ export default async function Sidebar() {
         </Link>
       </nav>
 
-      {/* Logout */}
-      <form
-        action={async () => {
-          'use server';
-          await signOut({ redirectTo: '/admin/login' });
-        }}
-      >
-        <button
-          type="submit"
-          className="w-full px-4 py-3 bg-red-500/20 hover:bg-red-500/30 rounded-lg transition font-medium text-left"
-        >
-          🚪 Logout
-        </button>
-      </form>
-    </aside>
+      <LogoutButton />    </aside>
   );
 }
