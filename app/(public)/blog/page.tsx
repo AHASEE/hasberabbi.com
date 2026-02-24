@@ -8,7 +8,7 @@ interface BlogPageProps {
 }
 
 export async function generateMetadata({ params }: BlogPageProps) {
-  const blog = await prisma.blog.findUnique({
+  const blog = await prisma.blog.findFirst({
     where: { slug: params.slug },
   });
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  const blog = await prisma.blog.findUnique({
+  const blog = await prisma.blog.findFirst({
     where: { slug: params.slug },
     include: {
       author: {
