@@ -1,7 +1,7 @@
 import PackageCard from '@/components/PackageCard';
 
 export const metadata = {
-  title: 'Best Umrah Packages 2025 Pakistan | Starting PKR 185,000 | Dar Al Salam',
+  title: 'Best Umrah Packages 2026 Pakistan | Starting PKR 185,000 | Dar Al Salam',
   description: 'Book affordable Umrah packages. Economy PKR 185,000, Premium PKR 295,000, VIP PKR 450,000. 100% visa approval.',
 };
 
@@ -75,7 +75,7 @@ export default function UmrahPage() {
       <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-20 bg-[url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1920&q=80')] bg-cover bg-center bg-blend-multiply">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-            🕋 Best Umrah Packages 2025
+            🕋 Best Umrah Packages 2026
           </h1>
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Economy, Premium & VIP packages with 100% visa approval guarantee
@@ -97,7 +97,7 @@ export default function UmrahPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-primary-dark mb-4">
-              Umrah Packages 2025 - All Inclusive
+              Umrah Packages 2026 - All Inclusive
             </h2>
             <p className="text-xl text-gray-600">
               Choose the package that suits your budget

@@ -71,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/umrah" className="transition hover:text-black/80">Economy Umrah</Link></li>
               <li><Link href="/umrah" className="transition hover:text-black/80">Premium Umrah</Link></li>
-              <li><Link href="/hajj" className="transition hover:text-black/80">Hajj 2025</Link></li>
+              <li><Link href="/hajj" className="transition hover:text-black/80">Hajj 2026</Link></li>
               <li><span className="transition hover:text-black/80 cursor-pointer">Visa Processing</span></li>
             </ul>
           </div>

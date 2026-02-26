@@ -1,8 +1,8 @@
 import PackageCard from '@/components/PackageCard';
 
 export const metadata = {
-  title: 'Hajj Packages 2025 Pakistan | Ministry Approved | Dar Al Salam',
-  description: 'Book Hajj 2025 packages. Government approved with complete services. Starting PKR 750,000.',
+  title: 'Hajj Packages 2026 Pakistan | Ministry Approved | Dar Al Salam',
+  description: 'Book Hajj 2026 packages. Government approved with complete services. Starting PKR 750,000.',
 };
 
 export default function HajjPage() {
@@ -87,18 +87,18 @@ export default function HajjPage() {
       <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-20 bg-[url('https://images.unsplash.com/photo-1564769625905-50e93615e769?w=1920&q=80')] bg-cover bg-center bg-blend-multiply">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-            🕌 Hajj 2025 Packages Pakistan
+            🕌 Hajj 2026 Packages Pakistan
           </h1>
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Government approved packages with complete services. Ministry regulated prices.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             
-            <a href="https://wa.me/923313954965?text=Hajj%202025%20details"
+            <a href="https://wa.me/923313954965?text=Hajj%202026%20details"
               target="_blank"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all"
             >
-              💬 Get Hajj 2025 Quote
+              💬 Get Hajj 2026 Quote
             </a>
           </div>
         </div>
@@ -108,15 +108,15 @@ export default function HajjPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6">📋 Hajj 2025 Important Information</h3>
+            <h3 className="text-2xl font-bold mb-6">📋 Hajj 2026 Important Information</h3>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-white/10 rounded-lg p-5 backdrop-blur-sm">
                 <p className="font-bold text-lg mb-2">🗓️ Hajj Dates</p>
-                <p className="text-sm">Expected: 14-19 June 2025</p>
+                <p className="text-sm">Expected: 19 may 2026</p>
               </div>
               <div className="bg-white/10 rounded-lg p-5 backdrop-blur-sm">
                 <p className="font-bold text-lg mb-2">📝 Deadline</p>
-                <p className="text-sm">Expected March 2025</p>
+                <p className="text-sm">Expected March 2026</p>
               </div>
               <div className="bg-white/10 rounded-lg p-5 backdrop-blur-sm">
                 <p className="font-bold text-lg mb-2">💰 Quota</p>
@@ -136,7 +136,7 @@ export default function HajjPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-primary-dark mb-4">
-              Hajj 2025 Packages - Ministry Approved
+              Hajj 2026 Packages - Ministry Approved
             </h2>
             <p className="text-xl text-gray-600">
               Complete 40-day packages with all services
@@ -156,11 +156,11 @@ export default function HajjPage() {
               Limited government quota available. Book now!
             </p>
             
-            <a  href="https://wa.me/923313954965?text=Apply%20Hajj%202025"
+            <a  href="https://wa.me/923313954965?text=Apply%20Hajj%202026"
               target="_blank"
               className="inline-block bg-accent hover:bg-accent-hover text-primary-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all"
             >
-              📝 Apply for Hajj 2025
+              📝 Apply for Hajj 2026
             </a>
           </div>
         </div>

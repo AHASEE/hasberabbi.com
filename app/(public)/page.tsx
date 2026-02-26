@@ -11,7 +11,7 @@ export default function HomePage() {
             ✨ 100% Verified Ministry Approved Travel Agency
           </span>
           <h1 data-lingo="hero_title">
-            Best Hajj & Umrah Packages 2025 Pakistan
+            Best Hajj & Umrah Packages 2026 Pakistan
           </h1>
           <p className="hero-subtext">
             Premium packages starting PKR 185,000 with luxury hotels, expert
@@ -32,7 +32,7 @@ export default function HomePage() {
             </a>
           </div>
           <div className="urgency-banner mt-4">
-            ⚡ Only 12 Seats Left for March 2025 | Book Within 24 Hours
+            ⚡ Only 12 Seats Left for March 2026 | Book Within 24 Hours
           </div>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="section-header text-center mb-8">
             <h2 className="text-3xl font-bold mb-2">
-              Cheap & Premium Umrah Packages 2025
+              Cheap & Premium Umrah Packages 2026
             </h2>
             <p>Choose the best package for your budget with installment options available</p>
           </div>
