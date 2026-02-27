@@ -12,9 +12,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
   const blog = await prisma.blog.findFirst({
     where: { slug },
   });
-
   if (!blog) return {};
-
   return {
     title: `${blog.title} | HasbeRabbi`,
     description: blog.excerpt || blog.title,
@@ -23,13 +21,11 @@ export async function generateMetadata({ params }: BlogPageProps) {
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { slug } = await params;
-  
+
   const blog = await prisma.blog.findFirst({
     where: { slug },
     include: {
-      author: {
-        select: { name: true },
-      },
+      author: { select: { name: true } },
     },
   });
 
@@ -42,17 +38,13 @@ export default async function BlogPage({ params }: BlogPageProps) {
       <h1 className="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">
         {blog.title}
       </h1>
-
       <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
         <span>👤 {blog.author?.name ?? 'Admin'}</span>
         <span>•</span>
         <span>📅 {new Date(blog.createdAt).toLocaleDateString('en-US', {
-          month: 'short',
-          day: 'numeric',
-          year: 'numeric'
+          month: 'short', day: 'numeric', year: 'numeric'
         })}</span>
       </div>
-
       <article
         className="prose prose-lg max-w-none"
         dangerouslySetInnerHTML={{ __html: blog.content }}
