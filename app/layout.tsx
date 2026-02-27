@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     locale: 'en_PK',
     type: 'website',
   },
+  // ⬇️ Yeh line add karein
+  verification: {
+    google: 'lvUsHPEtLdlMqIK4AGSahDqPprVSl-iPIoYMKNC7Ao8',
+  },
 };
 
 export default function RootLayout({
