@@ -6,7 +6,33 @@
 
 
 
-/* Fonts available — apply on specific elements only */
+/* ===== Global Font & Line Height ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7; /* Mobile */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    line-height: 1.85;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    line-height: 2.0;
+  }
+}
+
+/* Urdu blog pages k liye — sirf jahan chahiye wahan use karein */
+.urdu-content {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 2.2;
+}
 
 :root {
   --primary: #047857;
