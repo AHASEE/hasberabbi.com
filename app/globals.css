@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* Urdu + Hinglish Font & RTL Settings */
+body {
+  font-family: 'Noto Nastaliq Urdu', 'Poppins', serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8; /* Mobile first */
+}
+
+/* Hinglish / Roman Urdu ke liye */
+p, li, span, a {
+  font-family: 'Poppins', 'Noto Nastaliq Urdu', sans-serif;
+  line-height: 1.8;
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+  body {
+    line-height: 2.0;
+  }
+  p, li, span, a {
+    line-height: 2.0;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1024px) {
+  body {
+    line-height: 2.2;
+  }
+  p, li, span, a {
+    line-height: 2.2;
+  }
+}
+
 :root {
   --primary: #047857;
   --primary-light: #059669;
