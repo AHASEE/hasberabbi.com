@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description: 'Best Hajj packages, Umrah packages, and Visa services in Pakistan. Ministry approved travel agency since 2013 with 100% visa approval.',
   keywords: 'hajj packages pakistan, umrah packages, visa services',
   authors: [{ name: 'Hasb-e-Rabbi Travels' }],
+  alternates: {
+    canonical: 'https://hasberabbi.com',
+  },
   openGraph: {
     title: 'Hasb-e-Rabbi - Hajj, Umrah & Visa Services',
     description: 'Ministry approved Hajj, Umrah and Visa services in Pakistan',
@@ -21,7 +24,6 @@ export const metadata: Metadata = {
     locale: 'en_PK',
     type: 'website',
   },
-  // ⬇️ Yeh line add karein
   verification: {
     google: 'lvUsHPEtLdlMqIK4AGSahDqPprVSl-iPIoYMKNC7Ao8',
   },
