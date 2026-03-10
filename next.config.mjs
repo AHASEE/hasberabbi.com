@@ -12,6 +12,25 @@ const nextConfig = {
       }
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/umrah',
+        destination: '/umrah-packages',
+        permanent: true,
+      },
+      {
+        source: '/hajj',
+        destination: '/hajj-packages',
+        permanent: true,
+      },
+      {
+        source: '/visa',
+        destination: '/visa-services',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
