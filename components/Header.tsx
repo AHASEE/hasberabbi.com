@@ -95,13 +95,13 @@ export default function Header() {
               <Link href="/" className="text-amber-600 font-semibold hover:text-gray-700 transition">
                 Home
               </Link>
-              <Link href="/umrah" className="text-gray-700 hover:text-primary font-medium transition">
+              <Link href="/umrah-packages" className="text-gray-700 hover:text-primary font-medium transition">
                 Umrah Packages
               </Link>
-              <Link href="/hajj" className="text-gray-700 hover:text-primary font-medium transition">
+              <Link href="/hajj-packages" className="text-gray-700 hover:text-primary font-medium transition">
                 Hajj Packages
               </Link>
-              <Link href="/visa" className="text-gray-700 hover:text-primary font-medium transition">
+              <Link href="/visa-services" className="text-gray-700 hover:text-primary font-medium transition">
                 Visa Services
               </Link>
               <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition">

@@ -1,5 +1,6 @@
 // app/page.tsx
 import React from "react";
+import Image from 'next/image'
 import "../../app/(public)/style.css"
 export default function HomePage() {
   return (
@@ -112,7 +113,7 @@ export default function HomePage() {
                   Book Economy Package
                 </a>
                 <div className="package-footer mt-2 text-sm text-gray-600">
-                  ⭐⭐⭐⭐⭐ 487 travelers booked this in 2024
+                  ⭐⭐⭐⭐⭐ 487 travelers booked this in 2026
                 </div>
               </div>
             </div>
@@ -160,7 +161,7 @@ export default function HomePage() {
                   Book Premium Package
                 </a>
                 <div className="package-footer mt-2 text-sm text-gray-600">
-                  ⭐⭐⭐⭐⭐ 1,234 travelers booked this in 2024
+                  ⭐⭐⭐⭐⭐ 1,234 travelers booked this in 2026
                 </div>
               </div>
             </div>
@@ -206,9 +207,9 @@ export default function HomePage() {
                   Book VIP Package
                 </a>
                 <div className="package-footer mt-2 text-sm text-gray-600">
-                  ⭐⭐⭐⭐⭐ 289 travelers booked this in 2024
-                </div>
+                  ⭐⭐⭐⭐⭐ 289 travelers booked this in 2026
               </div>
+            </div>
             </div>
           </div>
         </div>

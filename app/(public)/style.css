@@ -216,18 +216,22 @@
         }
 
         /* Hero Section - Optimized (Image instead of video) */
+
         .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1920&q=80') center/cover;
-            background-attachment: fixed;
-        }
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1920&q=80') center/cover;
+    background-attachment: fixed;
+}
+
+        
 
         .hero-content {
             position: relative;

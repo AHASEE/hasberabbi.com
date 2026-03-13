@@ -84,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <span className="text-black">📍</span>
-                <span>Office # 123, Gulberg III, Lahore</span>
+                <span>Office # 202, Dolmen center, Karachi, Pakistan</span>
               </li>
               <li>
                 <a href="tel:+923313954965" className="flex items-center gap-2 transition hover:text-black/80">

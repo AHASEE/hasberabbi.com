@@ -1,7 +1,10 @@
 import PackageCard from '@/components/PackageCard';
 
 export const metadata = {
-  title: 'Hajj Packages 2026 Pakistan | Ministry Approved | Dar Al Salam',
+  title: 'Hajj Packages 2026 Pakistan | Ministry Approved | Hasb-e-Rabbi',
+  alternates: {
+    canonical: 'https://hasberabbi.com/hajj-packages',
+  },
   description: 'Book Hajj 2026 packages. Government approved with complete services. Starting PKR 750,000.',
 };
 
@@ -83,27 +86,38 @@ export default function HajjPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-20 bg-[url('https://images.unsplash.com/photo-1564769625905-50e93615e769?w=1920&q=80')] bg-cover bg-center bg-blend-multiply">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-            🕌 Hajj 2026 Packages Pakistan
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto mb-10">
-            Government approved packages with complete services. Ministry regulated prices.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            
-            <a href="https://wa.me/923313954965?text=Hajj%202026%20details"
-              target="_blank"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all"
-            >
-              💬 Get Hajj 2026 Quote
-            </a>
-          </div>
-        </div>
-      </section>
+<section className="hero relative min-h-screen flex items-center justify-center" id="home">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source src="/hero-video.mp4" type="video/mp4" />
+  </video>
 
+  {/* Overlay thoda zyada dark karo */}
+  <div className="absolute inset-0 bg-black/60 z-10" />
+
+  {/* Content */}
+  <div className="container mx-auto px-4 text-center relative z-20 text-white">
+    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white">
+       Hajj 2026 Packages Pakistan
+    </h1>
+    <p className="text-xl max-w-3xl mx-auto mb-10 text-white">
+      Government approved packages with complete services. Ministry regulated prices.
+    </p>
+    <div className="flex gap-4 justify-center flex-wrap">
+      {/* <a href="https://wa.me/923313954965?text=Hajj%202026%20details"
+        target="_blank"
+        className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all"
+      >
+        💬 Get Hajj 2026 Quote
+      </a> */}
+    </div>
+  </div>
+</section>
       {/* Important Info */}
       <section className="py-16">
         <div className="container mx-auto px-4">
