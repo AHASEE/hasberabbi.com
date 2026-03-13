@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'lvUsHPEtLdlMqIK4AGSahDqPprVSl-iPIoYMKNC7Ao8',
   },
+  other: {
+      'msvalidate.01': '74A82FCA7545743C7B40A06A316422CA',
+    }
 };
 
 export default function RootLayout({
