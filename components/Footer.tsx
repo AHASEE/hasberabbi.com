@@ -57,8 +57,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li><Link href="/" className="transition hover:text-black/80">Home</Link></li>
-              <li><Link href="/umrah" className="transition hover:text-black/80">Umrah Packages</Link></li>
-              <li><Link href="/hajj" className="transition hover:text-black/80">Hajj Packages</Link></li>
+              <li><Link href="/umrah-packages" className="transition hover:text-black/80">Umrah Packages</Link></li>
+              <li><Link href="/hajj-packages" className="transition hover:text-black/80">Hajj Packages</Link></li>
               <li><Link href="/blog" className="transition hover:text-black/80">Blog</Link></li>
             </ul>
           </div>
@@ -69,9 +69,9 @@ export default function Footer() {
               Our Services
             </h3>
             <ul className="space-y-3">
-              <li><Link href="/umrah" className="transition hover:text-black/80">Economy Umrah</Link></li>
-              <li><Link href="/umrah" className="transition hover:text-black/80">Premium Umrah</Link></li>
-              <li><Link href="/hajj" className="transition hover:text-black/80">Hajj 2026</Link></li>
+              <li><Link href="/umrah-packages" className="transition hover:text-black/80">Economy Umrah</Link></li>
+              <li><Link href="/umrah-packages" className="transition hover:text-black/80">Premium Umrah</Link></li>
+              <li><Link href="/hajj-packages" className="transition hover:text-black/80">Hajj 2026</Link></li>
               <li><span className="transition hover:text-black/80 cursor-pointer">Visa Processing</span></li>
             </ul>
           </div>
