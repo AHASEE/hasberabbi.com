@@ -45,7 +45,7 @@ export default function AdminLogin() {
             ☪
           </div>
           <h1 className="text-3xl font-extrabold text-primary-dark">Admin Login</h1>
-          <p className="text-gray-500 mt-2">Dar Al Salam - Management Portal</p>
+          <p className="text-gray-500 mt-2">Hasb-e-Rabbi - Management Portal</p>
         </div>
 
         {/* Error Message */}

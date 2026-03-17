@@ -2,7 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Visa Services | Country Visa Information & Requirements | Dar Al Salam',
+  title: 'Visa Services | Country Visa Information & Requirements | Hasb-e-Rabbi',
   description: 'Complete visa information for multiple countries. Tourist, business, and work visa services.',
 };
 
