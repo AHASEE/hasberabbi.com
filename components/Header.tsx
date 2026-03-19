@@ -137,7 +137,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/umrah"
+                href="/umrah-packages"
                 className="text-gray-700 hover:text-primary font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >

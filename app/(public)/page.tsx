@@ -105,7 +105,7 @@ export default function HomePage() {
                   <li>Ziyarat Tours in Makkah & Madinah</li>
                 </ul>
                 <a
-                  href="https://wa.me/923001234567?text=I'm%20interested%20in%20Economy%20Umrah%20Package%20(PKR%20185,000)"
+                  href="https://wa.me/923313954965?text=I'm%20interested%20in%20Economy%20Umrah%20Package%20(PKR%20185,000)"
                   className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-500 text-white font-semibold"
                   target="_blank"
                   rel="noreferrer"
