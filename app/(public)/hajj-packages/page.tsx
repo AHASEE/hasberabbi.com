@@ -97,24 +97,53 @@ export default function HajjPage() {
     <source src="/hero-video.mp4" type="video/mp4" />
   </video>
 
-  {/* Overlay thoda zyada dark karo */}
+  {/* Overlay */}
   <div className="absolute inset-0 bg-black/60 z-10" />
 
   {/* Content */}
   <div className="container mx-auto px-4 text-center relative z-20 text-white">
-    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white">
-       Hajj 2026 Packages Pakistan
+    
+    {/* Badge */}
+    <span className="inline-block bg-amber-400/20 border border-amber-400 text-amber-300 px-6 py-2 rounded-full text-sm font-semibold mb-6">
+      🏆 Ministry Approved Hajj Agency
+    </span>
+
+    {/* Title */}
+    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+      Hajj 2026 Packages
+      <br />
+      <span className="text-amber-400">Pakistan</span>
     </h1>
-    <p className="text-xl max-w-3xl mx-auto mb-10 text-white">
+
+    {/* Subtitle */}
+    <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-white/90">
       Government approved packages with complete services. Ministry regulated prices.
     </p>
+
+    {/* Buttons */}
     <div className="flex gap-4 justify-center flex-wrap">
-      {/* <a href="https://wa.me/923313954965?text=Hajj%202026%20details"
+      <a href="https://wa.me/923313954965?text=Hajj%202026%20details"
         target="_blank"
-        className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all"
-      >
+        className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all">
         💬 Get Hajj 2026 Quote
-      </a> */}
+      </a>
+      <a href="tel:+923313954965"
+        className="bg-amber-400 hover:bg-amber-500 text-black px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all">
+        📞 Call Now
+      </a>
+    </div>
+
+    {/* Stats */}
+    <div className="flex gap-4 justify-center mt-10 flex-wrap">
+      <div className="bg-white/10 backdrop-blur px-6 py-3 rounded-full">
+        <span className="font-bold text-amber-400">Limited</span> Seats
+      </div>
+      <div className="bg-white/10 backdrop-blur px-6 py-3 rounded-full">
+        <span className="font-bold text-amber-400">100%</span> Visa Approval
+      </div>
+      <div className="bg-white/10 backdrop-blur px-6 py-3 rounded-full">
+        <span className="font-bold text-amber-400">Since</span> 2013
+      </div>
     </div>
   </div>
 </section>

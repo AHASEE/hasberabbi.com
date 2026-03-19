@@ -95,19 +95,14 @@ export default function Header() {
               <Link href="/" className="text-amber-600 font-semibold hover:text-gray-700 transition">
                 Home
               </Link>
-              <Link href="/umrah-packages" className="text-gray-700 hover:text-primary font-medium transition">
-                Umrah Packages
-              </Link>
-              <Link href="/hajj-packages" className="text-gray-700 hover:text-primary font-medium transition">
-                Hajj Packages
-              </Link>
-              <Link href="/visa-services" className="text-gray-700 hover:text-primary font-medium transition">
-                Visa Services
-              </Link>
+              <Link href="/umrah-packages" className="... whitespace-nowrap">Umrah Packages</Link>
+<Link href="/hajj-packages" className="... whitespace-nowrap">Hajj Packages</Link>
+<Link href="/visa-services" className="... whitespace-nowrap">Visa Services</Link>
               <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition">
                 Blog
               </Link>
-
+  <Link href="/about">About</Link>
+    <Link href="/contact">Contact</Link>
               
                <a href="tel:+923313954965"
                 className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-light transition"
