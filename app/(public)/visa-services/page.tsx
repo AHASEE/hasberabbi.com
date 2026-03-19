@@ -4,7 +4,12 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Visa Services | Country Visa Information & Requirements | Hasb-e-Rabbi',
   description: 'Complete visa information for multiple countries. Tourist, business, and work visa services.',
-};
+  
+  alternates: {
+    canonical: 'https://hasberabbi.com/visa-services',
+  },
+}
+
 
 export default async function VisaPage() {
   // Get visa category

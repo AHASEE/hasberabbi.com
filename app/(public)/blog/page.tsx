@@ -4,7 +4,12 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Blog | HasbeRabbi',
   description: 'Read our latest articles about Umrah, Hajj, and travel tips.',
-};
+
+  alternates: {
+    canonical: 'https://hasberabbi.com/blog',
+  },
+}
+
 
 export const revalidate = 60;
 

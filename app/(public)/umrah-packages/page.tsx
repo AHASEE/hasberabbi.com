@@ -3,7 +3,11 @@ import PackageCard from '@/components/PackageCard';
 export const metadata = {
   title: 'Best Umrah Packages 2026 Pakistan | Starting PKR 185,000 | Hasb-e-Rabbi',
   description: 'Book affordable Umrah packages. Economy PKR 185,000, Premium PKR 295,000, VIP PKR 450,000. 100% visa approval.',
-};
+  alternates: {
+    canonical: 'https://hasberabbi.com/umrah-packages',
+  },
+}
+
 
 export default function UmrahPage() {
   const packages = [
