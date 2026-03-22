@@ -146,7 +146,7 @@ export default function HajjPage() {
       </div>
     </div>
   </div>
-</section>
+</section> 
       {/* Important Info */}
       <section className="py-16">
         <div className="container mx-auto px-4">
