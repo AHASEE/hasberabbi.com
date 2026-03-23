@@ -29,7 +29,7 @@ export default function Header() {
       {/* Trust Bar */}
       <div className="bg-emerald-50 border-b-2 border-primary-light py-4">
         <div className="container mx-auto px-4 flex justify-around items-center flex-wrap gap-4 text-sm font-semibold text-primary-dark">
-          <div className="flex items-center gap-2"><span>🏆</span> Ministry Approved MRA/2024/1234</div>
+          <div className="flex items-center gap-2"><span>🏆</span> Ministry Approved MRA/423</div>
           <div className="flex items-center gap-2"><span>⭐</span> 4.9/5 (892 Reviews)</div>
           <div className="flex items-center gap-2"><span>📺</span> Featured on Geo News</div>
           <div className="flex items-center gap-2"><span>✅</span> 100% Visa Approval</div>
