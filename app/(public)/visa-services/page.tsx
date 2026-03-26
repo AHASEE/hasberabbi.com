@@ -2,7 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Visa Services | Country Visa Information & Requirements | Hasb-e-Rabbi',
+  title: 'Visa Services - Country Visa Information & Requirements',
   description: 'Complete visa information for multiple countries. Tourist, business, and work visa services.',
   
   alternates: {

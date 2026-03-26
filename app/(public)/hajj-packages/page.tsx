@@ -1,7 +1,7 @@
 import PackageCard from '@/components/PackageCard';
 
 export const metadata = {
-  title: 'Hajj Packages 2026 Pakistan | Ministry Approved | Hasb-e-Rabbi',
+  title: 'Hajj Packages 2026 Pakistan - Hasb-e-Rabbi',
   alternates: {
     canonical: 'https://hasberabbi.com/hajj-packages',
   },
