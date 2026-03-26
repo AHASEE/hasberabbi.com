@@ -19,14 +19,15 @@ export default function Footer() {
               />
             </div>
             <div>
-            <h1
+            
+<div
   className="text-2xl font-extrabold leading-none bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent py-2"
   style={{
     textShadow: `0.5px 0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px -0.5px 0 #000`
   }}
 >
   Hasb-e-Rabbi
-</h1>
+</div>
 <span
   className="text-sm font-semibold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent"
   style={{

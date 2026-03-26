@@ -3,9 +3,12 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export default async function EditBlogPage({ params }: { params: { id: string } }) {
+export default async function EditBlogPage(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+  const id = params.id;
+
   const blog = await prisma.blog.findUnique({
-    where: { id: params.id },
+    where: { id },
   });
 
   if (!blog) return notFound();

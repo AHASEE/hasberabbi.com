@@ -53,9 +53,10 @@ export default function Header() {
                 />
               </div>
               <div>
-                <h1 className="text-lg font-extrabold leading-none whitespace-nowrap bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
+
+                <div className="text-lg font-extrabold leading-none whitespace-nowrap bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
                   Hasb-e-Rabbi
-                </h1>
+                </div>
                 <span className="text-xs font-semibold whitespace-nowrap bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                   Travels & Tours
                 </span>
