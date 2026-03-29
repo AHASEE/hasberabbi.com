@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("PRISMA_DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("PRISMA_DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
 }
 
 model User {
@@ -46,6 +47,7 @@ model Blog {
   metaDesc   String?  
   language   String   @default("english")
   published  Boolean  @default(false)
+  featuredImage String?
   
   categoryId String
   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)

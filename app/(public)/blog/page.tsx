@@ -55,6 +55,14 @@ export default async function BlogListPage() {
                   href={`/blog/${blog.slug}`}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all"
                 >
+                  {/* Featured Image */}
+                  {blog.featuredImage && (
+                    <img
+                      src={blog.featuredImage}
+                      alt={blog.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  )}
                   <div className="p-6">
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                       <span>👤 {blog.author.name}</span>
