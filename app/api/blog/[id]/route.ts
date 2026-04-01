@@ -14,15 +14,17 @@ export async function PATCH(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    // Await params for Next.js 15+
     const { id } = await params;
 
     const body = await request.json();
-    const { title, slug, content, excerpt, published, categoryId, countryId, language } = body;
+    const { 
+      title, slug, content, excerpt, published, 
+      categoryId, countryId, language,
+      featuredImage, metaTitle, metaDesc
+    } = body;
 
     console.log('Updating blog:', id);
 
-    // Check if blog exists
     const existingBlog = await prisma.blog.findUnique({
       where: { id }
     });
@@ -31,18 +33,15 @@ export async function PATCH(
       return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
     }
 
-    // Check if slug is taken by another blog
     if (slug !== existingBlog.slug) {
       const slugTaken = await prisma.blog.findUnique({
         where: { slug }
       });
-
       if (slugTaken && slugTaken.id !== id) {
         return NextResponse.json({ error: 'Slug already exists' }, { status: 400 });
       }
     }
 
-    // Update blog
     const updatedBlog = await prisma.blog.update({
       where: { id },
       data: {
@@ -54,6 +53,9 @@ export async function PATCH(
         language: language || 'english',
         categoryId: categoryId && categoryId.trim() !== '' ? categoryId : null,
         countryId: countryId && countryId.trim() !== '' ? countryId : null,
+        featuredImage: featuredImage || null,
+        metaTitle: metaTitle || null,
+        metaDesc: metaDesc || null,
       }
     });
 
@@ -80,7 +82,6 @@ export async function DELETE(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    // Await params for Next.js 15+
     const { id } = await params;
 
     console.log('Deleting blog:', id);

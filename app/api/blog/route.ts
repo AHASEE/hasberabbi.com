@@ -31,11 +31,14 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { title, slug, content, excerpt, published, categoryId, countryId, language } = body;
+    const { 
+      title, slug, content, excerpt, published, 
+      categoryId, countryId, language,
+      featuredImage, metaTitle, metaDesc
+    } = body;
 
     console.log('Creating blog:', { title, slug, published });
 
-    // Check if slug exists
     const existingBlog = await prisma.blog.findUnique({
       where: { slug }
     });
@@ -44,7 +47,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Slug already exists' }, { status: 400 });
     }
 
-    // Get user ID
     const user = await prisma.user.findUnique({
       where: { email: session.user.email! }
     });
@@ -63,7 +65,10 @@ export async function POST(request: Request) {
         language: language || 'english',
         categoryId: categoryId && categoryId.trim() !== '' ? categoryId : null,
         countryId: countryId && countryId.trim() !== '' ? countryId : null,
-        authorId: user.id
+        authorId: user.id,
+        featuredImage: featuredImage || null,
+        metaTitle: metaTitle || null,
+        metaDesc: metaDesc || null,
       }
     });
 
