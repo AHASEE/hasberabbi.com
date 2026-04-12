@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Visa Services - Country Visa Information & Requirements',
   description: 'Complete visa information for multiple countries. Tourist, business, and work visa services.',
-  
+
   alternates: {
     canonical: 'https://hasberabbi.com/visa-services',
   },
@@ -50,25 +50,29 @@ export default async function VisaPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-20 bg-[url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=80')] bg-cover bg-center bg-blend-multiply">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-            🛂 Visa Services & Information
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto mb-10">
-            Complete visa guides for multiple countries. Tourist, Business & Work visas.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a 
-              href="https://wa.me/923313954965?text=I%20need%20visa%20information"
-              target="_blank"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all"
-            >
-              💬 Get Visa Consultation
-            </a>
-          </div>
-        </div>
-      </section>
+      <section className="relative text-white py-20 bg-[url('/visa-hero.jpg')] bg-cover bg-center">
+  
+  {/* Overlay - alag div */}
+  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-black/30"></div>
+  {/* Content - alag div, overlay ke andar nahi! */}
+  <div className="relative z-10 container mx-auto px-4 text-center">
+   <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg w-full text-center">
+       Visa Services & Information
+    </h1>
+    <p className="text-xl max-w-3xl mx-auto mb-10 drop-shadow-md">
+      Complete visa guides for multiple countries. Tourist, Business & Work visas.
+    </p>
+    <div className="flex gap-4 justify-center flex-wrap">
+      <a 
+        href="https://wa.me/923313954965?text=I%20need%20visa%20information"
+        target="_blank"
+        className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg shadow-2xl hover:scale-105 transition-all">        
+        💬 Get Visa Consultation
+      </a>
+    </div>
+  </div>
+
+</section>
 
       {/* Featured/Latest Guides */}
       {featuredBlogs.length > 0 && (
@@ -88,9 +92,9 @@ export default async function VisaPage() {
                         {blog.country?.name || 'General'}
                       </span>
                       <span className="text-xs">
-                        {blog.language === 'urdu' ? '🇵🇰 اردو' : 
-                         blog.language === 'hinglish' ? '🇮🇳 Hinglish' : 
-                         '🇬🇧 English'}
+                        {blog.language === 'urdu' ? '🇵🇰 اردو' :
+                          blog.language === 'hinglish' ? '🇮🇳 Hinglish' :
+                            '🇬🇧 English'}
                       </span>
                     </div>
                     <p className="font-bold text-lg mb-2">{blog.title}</p>
@@ -126,7 +130,7 @@ export default async function VisaPage() {
               <p className="text-gray-500 mb-8">
                 Check back soon for country-specific visa information
               </p>
-              <a 
+              <a
                 href="https://wa.me/923313954965?text=Need%20visa%20information"
                 target="_blank"
                 className="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-all"
@@ -159,9 +163,9 @@ export default async function VisaPage() {
                       >
                         <div className="flex items-start justify-between mb-3">
                           <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                            {blog.language === 'urdu' ? '🇵🇰 اردو' : 
-                             blog.language === 'hinglish' ? '🇮🇳 Hinglish' : 
-                             '🇬🇧 English'}
+                            {blog.language === 'urdu' ? '🇵🇰 اردو' :
+                              blog.language === 'hinglish' ? '🇮🇳 Hinglish' :
+                                '🇬🇧 English'}
                           </span>
                         </div>
 
@@ -198,7 +202,7 @@ export default async function VisaPage() {
             <p className="text-lg mb-8">
               Our visa experts are available 24/7 to assist you
             </p>
-            <a 
+            <a
               href="https://wa.me/923313954965?text=Help%20with%20visa%20application"
               target="_blank"
               className="inline-block bg-accent hover:bg-accent-hover text-primary-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all"
