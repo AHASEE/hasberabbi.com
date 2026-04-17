@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // 1. Database se blogs fetch karna
   const blogs = await prisma.blog.findMany({
     where: { published: true },
     select: { slug: true, updatedAt: true },
@@ -9,7 +10,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogUrls = blogs.map((blog) => ({
     url: `https://hasberabbi.com/blog/${blog.slug}`,
-    lastModified: blog.updatedAt,
+    // Agar updatedAt null ho toh aaj ki date use karein
+    lastModified: blog.updatedAt ? new Date(blog.updatedAt) : new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
@@ -18,31 +20,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: 'https://hasberabbi.com',
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: 'always' as const, // Home page hamesha check kare Google
       priority: 1,
     },
     {
       url: 'https://hasberabbi.com/blog',
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: 'daily' as const,
       priority: 0.9,
     },
     {
       url: 'https://hasberabbi.com/umrah-packages',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
       url: 'https://hasberabbi.com/hajj-packages',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
       url: 'https://hasberabbi.com/visa-services',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.7,
     },
     ...blogUrls,
