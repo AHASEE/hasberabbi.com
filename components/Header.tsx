@@ -4,8 +4,21 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 
+const visaCountries = [
+  { name: 'Saudi Arabia', slug: 'saudi-arabia', flag: '🇸🇦' },
+  { name: 'UAE / Dubai', slug: 'uae-dubai', flag: '🇦🇪' },
+  { name: 'United Kingdom', slug: 'united-kingdom', flag: '🇬🇧' },
+  { name: 'Schengen (Europe)', slug: 'schengen-europe', flag: '🇪🇺' },
+  { name: 'Malaysia', slug: 'malaysia', flag: '🇲🇾' },
+  { name: 'Turkey', slug: 'turkey', flag: '🇹🇷' },
+  { name: 'Canada', slug: 'canada', flag: '🇨🇦' },
+  { name: 'Australia', slug: 'australia', flag: '🇦🇺' },
+];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisaOpen, setIsVisaOpen] = useState(false);
+  const [isMobileVisaOpen, setIsMobileVisaOpen] = useState(false);
 
   return (
     <>
@@ -37,7 +50,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="bg-white/98 backdrop-blur-lg sticky top-0 z-50 shadow-md">
+      <header className="bg-white/98 backdrop-blur-lg sticky top-0 z-[999] shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
 
@@ -53,7 +66,6 @@ export default function Header() {
                 />
               </div>
               <div>
-
                 <div className="text-lg font-extrabold leading-none whitespace-nowrap bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
                   Hasb-e-Rabbi
                 </div>
@@ -74,20 +86,53 @@ export default function Header() {
               <Link href="/hajj-packages" className="text-gray-700 hover:text-primary font-medium transition whitespace-nowrap">
                 Hajj Packages
               </Link>
-              <Link href="/visa-services" className="text-gray-700 hover:text-primary font-medium transition whitespace-nowrap">
-                Visa Services
-              </Link>
+
+              {/* Visa Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsVisaOpen(true)}
+                onMouseLeave={() => setIsVisaOpen(false)}
+              >
+                <button className="flex items-center gap-1 text-gray-700 hover:text-primary font-medium transition whitespace-nowrap">
+                  Visa Services
+                  <span className={`text-xs transition-transform duration-200 ${isVisaOpen ? 'rotate-180' : ''}`}>▾</span>
+                </button>
+
+                {isVisaOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-[999]">
+                    <Link
+                      href="/visa-services"
+                      className="block px-4 py-2 text-sm font-bold text-primary hover:bg-gray-50 border-b border-gray-100 mb-1"
+                    >
+                      🌍 All Visa Services
+                    </Link>
+                    {visaCountries.map((country) => (
+                      <Link
+                        key={country.slug}
+                        href={`/visa-services/${country.slug}`}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary transition"
+                      >
+                        <span>{country.flag}</span>
+                        <span>{country.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition whitespace-nowrap">
                 Blog
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/about" className="text-gray-700 hover:text-primary font-medium">
                 About
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/contact" className="text-gray-700 hover:text-primary font-medium">
                 Contact
               </Link>
-              <a href="tel:+923313954965"
-                className="bg-primary text-white px-4 py-2 rounded-full font-semibold hover:bg-primary-light transition whitespace-nowrap text-sm flex-shrink-0">
+              <a
+                href="tel:+923313954965"
+                className="bg-primary text-white px-4 py-2 rounded-full font-semibold hover:bg-primary-light transition whitespace-nowrap text-sm flex-shrink-0"
+              >
                 📞 +92 331 3954965
               </a>
             </nav>
@@ -113,9 +158,41 @@ export default function Header() {
               <Link href="/hajj-packages" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
                 Hajj Packages
               </Link>
-              <Link href="/visa-services" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
-                Visa Services
-              </Link>
+
+              {/* Mobile Visa Dropdown */}
+              <div>
+                <button
+                  onClick={() => setIsMobileVisaOpen(!isMobileVisaOpen)}
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-primary font-medium"
+                >
+                  <span>Visa Services</span>
+                  <span className={`text-xs transition-transform duration-200 ${isMobileVisaOpen ? 'rotate-180' : ''}`}>▾</span>
+                </button>
+
+                {isMobileVisaOpen && (
+                  <div className="mt-2 ml-4 flex flex-col gap-2 border-l-2 border-primary/20 pl-4">
+                    <Link
+                      href="/visa-services"
+                      className="text-sm font-bold text-primary"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      🌍 All Visa Services
+                    </Link>
+                    {visaCountries.map((country) => (
+                      <Link
+                        key={country.slug}
+                        href={`/visa-services/${country.slug}`}
+                        className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <span>{country.flag}</span>
+                        <span>{country.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <Link href="/blog" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
                 Blog
               </Link>
