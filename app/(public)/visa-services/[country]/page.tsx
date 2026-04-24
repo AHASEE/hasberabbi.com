@@ -50,7 +50,7 @@ const countriesData: Record<string, {
     name: 'UAE / Dubai',
     flag: '🇦🇪',
     types: ['Tourist Visa (30 days)', 'Tourist Visa (60 days)', 'Visit Visa', 'Work Visa'],
-    fee: 'PKR 15,000 – 25,000',
+    fee: 'PKR 45,000 – 65,000',
     processing: '2–4 working days',
     validity: '30 or 60 days',
     documents: [
@@ -106,7 +106,7 @@ const countriesData: Record<string, {
     name: 'Schengen (Europe)',
     flag: '🇪🇺',
     types: ['Tourist Visa', 'Business Visa', 'Transit Visa'],
-    fee: 'PKR 35,000 – 55,000 (including service charges & insurance)',
+    fee: 'PKR 45,000 – 65,000 (including service charges & insurance)',
     feeBreakdown: [
       'Adult (12+ years): EUR 90 (approx PKR 31,000) + VFS Global service charges',
       'Children (6–11 years): EUR 45',
@@ -142,7 +142,7 @@ const countriesData: Record<string, {
     name: 'Malaysia',
     flag: '🇲🇾',
     types: ['eVisa (Tourist)', 'Single Entry Visit Visa', 'Social Visit Visa'],
-    fee: 'PKR 12,000 – 20,000',
+    fee: 'PKR 15,000 – 25,000',
     processing: '5–10 working days (sometimes longer)',
     validity: 'Up to 30 days stay (visa usually valid for 3 months)',
     documents: [
@@ -170,7 +170,7 @@ const countriesData: Record<string, {
     name: 'Turkey',
     flag: '🇹🇷',
     types: ['e-Visa (Tourist & Business)', 'Sticker Tourist Visa (Embassy Route)'],
-    fee: 'PKR 15,000 – 35,000 (including service charges)',
+    fee: 'PKR 25,000 – 35,000 (including service charges)',
     feeBreakdown: [
       'e-Visa (if eligible): Approx PKR 15,000 – 25,000',
       'Sticker Tourist Visa (Embassy route): Approx PKR 22,000 – 35,000',
