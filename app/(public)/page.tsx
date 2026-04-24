@@ -498,9 +498,108 @@ export default function HomePage() {
             </div>
 {/*  */}
 
-      {/* Add Comparison Table, Testimonials, FAQ sections similarly... */}
-      {/* Wrap all content inside this main component */}
+
+
+      {/* FAQ Schema Markup for Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Umrah package 2026 Pakistan mein kitna price hai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hasb-e-Rabbi ka Economy Umrah Package PKR 185,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Umrah visa kitne din mein milta hai Pakistan se?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hasb-e-Rabbi ke through Umrah visa 7-10 working days mein mil jaata hai. Hum poori process handle karte hain — aapko sirf documents dene hote hain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kya Lahore aur Islamabad se bhi Umrah package available hai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Haan! Hum Karachi, Lahore, Islamabad, Rawalpindi, Peshawar, Quetta, Multan aur Faisalabad se Umrah aur Hajj packages provide karte hain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Hajj 2026 Pakistan se kab shuru hoga?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hajj 2026 expected May/June 2026 mein hoga. Pakistan se Hajj quota limited hota hai isliye jaldi registration karwain. Hasb-e-Rabbi se abhi contact karein."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Umrah package mein kya kya included hota hai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hamare packages mein Umrah visa processing, round trip air tickets, Makkah aur Madinah mein hotel accommodation, AC transport, meals, ziyarat tours aur experienced Muallim sab kuch included hai."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kya Hasb-e-Rabbi Ministry approved hai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Haan! Hasb-e-Rabbi Travels & Tours Ministry of Religious Affairs Pakistan se officially approved travel agency hai — registration number MRA/423. Hum 2013 se registered aur operating hain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Umrah ke liye kya documents chahiye Pakistan se?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Umrah ke liye valid passport (6 months validity), CNIC copy, 2 passport size photos, aur Mahram certificate (khawatin ke liye) chahiye. Hasb-e-Rabbi ki team poori guidance provide karti hai."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Local Business Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Hasb-e-Rabbi Travels & Tours",
+            "url": "https://hasberabbi.com",
+            "logo": "https://hasberabbi.com/logo.jpg",
+            "description": "Ministry of Religious Affairs approved Hajj and Umrah travel agency in Pakistan. Serving pilgrims since 2013 with 100% visa approval guarantee.",
+            "telephone": "+923313954965",
+            "email": "haseebclubi33@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "PK",
+              "addressRegion": "Pakistan"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "892"
+            },
+            "priceRange": "PKR 185,000 - PKR 450,000",
+            "openingHours": "Mo-Su 00:00-23:59",
+            "sameAs": [
+              "https://hasberabbi.com"
+            ]
+          })
+        }}
+      />
     </main>
   );
 }
-
