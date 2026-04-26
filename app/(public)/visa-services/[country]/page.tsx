@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 const countriesData: Record<string, {
   name: string;
@@ -18,6 +19,9 @@ const countriesData: Record<string, {
   whatsappMsg: string;
   seoTitle: string;
   seoDescription: string;
+  // ✅ New: for Schema & OG image
+  ogImage?: string;
+  schemaKeywords?: string[];
 }> = {
   'saudi-arabia': {
     name: 'Saudi Arabia',
@@ -26,6 +30,8 @@ const countriesData: Record<string, {
     fee: 'PKR 12,000 – 20,000',
     processing: '3–7 working days',
     validity: '1 year (multiple entry)',
+    ogImage: 'https://images.pexels.com/photos/15839821/pexels-photo-15839821.jpeg?w=1200',
+    schemaKeywords: ['Saudi Arabia visa Pakistan', 'Saudi tourist visa', 'Umrah visa Pakistan', 'Saudi work visa'],
     documents: [
       'Valid passport (minimum 6 months remaining validity)',
       '2 passport size photos (white background)',
@@ -43,8 +49,8 @@ const countriesData: Record<string, {
       'Work visa requires employer sponsorship from Saudi Arabia.',
     ],
     whatsappMsg: 'I need help with Saudi Arabia visa',
-    seoTitle: 'Saudi Arabia Visa from Pakistan – Requirements, Fee & Process | Hasb-e-Rabbi',
-    seoDescription: 'Complete Saudi Arabia visa guide for Pakistani applicants. Tourist, Umrah, Business & Work visa requirements, documents, fee and processing time. Apply with Hasb-e-Rabbi Travels.',
+    seoTitle: 'Saudi Arabia Visa Pakistan – Fees, Docs & Process 2026',
+    seoDescription: 'Saudi Arabia visa ke liye complete guide. Tourist, Umrah, Business & Work visa documents, fee PKR 12,000–20,000, processing 3–7 days. Karachi mein apply karein — HasbeRabbi Travels.',
   },
   'uae-dubai': {
     name: 'UAE / Dubai',
@@ -53,6 +59,8 @@ const countriesData: Record<string, {
     fee: 'PKR 45,000 – 65,000',
     processing: '2–4 working days',
     validity: '30 or 60 days',
+    ogImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80',
+    schemaKeywords: ['UAE visa Pakistan', 'Dubai visa Pakistan', 'Dubai tourist visa', 'UAE work visa'],
     documents: [
       'Valid passport (minimum 6 months remaining validity)',
       '2 passport size photos (white background)',
@@ -70,8 +78,8 @@ const countriesData: Record<string, {
       'Visa on arrival is not available for Pakistani passport holders.',
     ],
     whatsappMsg: 'I need help with UAE Dubai visa',
-    seoTitle: 'UAE Dubai Visa from Pakistan – Requirements, Fee & Process | Hasb-e-Rabbi',
-    seoDescription: 'Complete UAE Dubai visa guide for Pakistani applicants. Tourist, Visit & Work visa requirements, documents, fee and processing time. Apply with Hasb-e-Rabbi Travels.',
+    seoTitle: 'UAE Dubai Visa Pakistan – Tourist & Work Visa 2026',
+    seoDescription: 'UAE Dubai visa ke liye complete guide. Tourist (30/60 days), Visit & Work visa documents, fee PKR 45,000–65,000, processing 2–4 days. Pakistani applicants ke liye — HasbeRabbi Travels.',
   },
   'united-kingdom': {
     name: 'United Kingdom',
@@ -80,6 +88,8 @@ const countriesData: Record<string, {
     fee: 'PKR 35,000 – 55,000',
     processing: '15–21 working days',
     validity: '6 months (standard visitor)',
+    ogImage: 'https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?w=1200',
+    schemaKeywords: ['UK visa Pakistan', 'UK visitor visa', 'Britain visa Pakistan', 'UK student visa Pakistan'],
     documents: [
       'Valid passport along with all previous passports',
       '2 passport size photos (as per UK specifications)',
@@ -99,8 +109,8 @@ const countriesData: Record<string, {
       'A well-prepared application with clear documentation significantly improves approval chances.',
     ],
     whatsappMsg: 'I need help with UK visa',
-    seoTitle: 'UK Visa from Pakistan – Requirements, Fee & Process | Hasb-e-Rabbi',
-    seoDescription: 'Complete UK visa guide for Pakistani applicants. Visitor, Student & Work visa requirements, documents, fee and processing time. Apply with Hasb-e-Rabbi Travels.',
+    seoTitle: 'UK Visa Pakistan – Requirements & Process 2026',
+    seoDescription: 'UK visitor, student & work visa ke liye complete guide. Documents, fee PKR 35,000–55,000, processing 15–21 days. VFS Global se apply — HasbeRabbi Travels Karachi.',
   },
   'schengen-europe': {
     name: 'Schengen (Europe)',
@@ -116,6 +126,8 @@ const countriesData: Record<string, {
     feeNote: 'Exact amount varies based on current exchange rate and selected Schengen country VFS charges. Our service charges are separate. Always confirm final fee on VFS Global or embassy website. Fee is subject to change.',
     processing: '15–30 working days (official minimum 15 calendar days). During peak season (June–August, December–January) it can take 30–60 days. Recommended: Apply at least 6–8 weeks before your trip.',
     validity: '90 days within any 180-day period (Short-stay Type C Schengen Visa)',
+    ogImage: 'https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?w=1200',
+    schemaKeywords: ['Schengen visa Pakistan', 'Europe visa Pakistan', 'Schengen visa Karachi', 'Europe tourist visa Pakistan'],
     eligibilityNote: 'Pakistani applicants must book a VFS Global appointment (available in Karachi, Lahore, and Islamabad). The application is submitted through the embassy or consulate of your main destination country. You must demonstrate strong ties to Pakistan — employment letter, business proof, family ties, and bank statements — otherwise the risk of rejection is very high. Always check the exact requirements for your chosen Schengen country on the official VFS Global website before applying.',
     documents: [
       'Valid Pakistani passport (minimum 6 months validity beyond your planned stay)',
@@ -135,8 +147,8 @@ const countriesData: Record<string, {
     ],
     disclaimer: 'This information is provided for general guidance only. Final requirements, fee, and visa decision depend on the concerned Schengen embassy and VFS Global. We do not guarantee visa approval.',
     whatsappMsg: 'I need help with Schengen Europe visa',
-    seoTitle: 'Schengen Visa from Pakistan – Requirements, Fee & Process | Hasb-e-Rabbi',
-    seoDescription: 'Complete Schengen visa guide for Pakistani applicants. Tourist and Business visa fee PKR 35,000–55,000, VFS Global appointment process, required documents and processing time 15–30 working days.',
+    seoTitle: 'Schengen Visa Pakistan – Europe Tourist Visa 2026',
+    seoDescription: 'Schengen Europe visa guide Pakistani applicants ke liye. Tourist & Business visa fee PKR 45,000–65,000, VFS Global appointment, documents aur processing 15–30 days.',
   },
   'malaysia': {
     name: 'Malaysia',
@@ -145,6 +157,8 @@ const countriesData: Record<string, {
     fee: 'PKR 15,000 – 25,000',
     processing: '5–10 working days (sometimes longer)',
     validity: 'Up to 30 days stay (visa usually valid for 3 months)',
+    ogImage: 'https://images.pexels.com/photos/1538177/pexels-photo-1538177.jpeg?w=1200',
+    schemaKeywords: ['Malaysia visa Pakistan', 'Malaysia eVisa Pakistan', 'Malaysia tourist visa', 'KL visa Pakistan'],
     documents: [
       'Valid passport (minimum 6 months validity from date of travel)',
       'Recent passport size photo (35mm x 50mm, white background)',
@@ -163,14 +177,14 @@ const countriesData: Record<string, {
       'For longer or multiple entries, embassy route may be required.',
     ],
     whatsappMsg: 'I need help with Malaysia visa',
-    seoTitle: 'Malaysia Visa from Pakistan – eVisa Requirements, Fee & Process 2026 | Hasb-e-Rabbi',
-    seoDescription: 'Complete guide for Pakistani citizens applying for Malaysia eVisa / Tourist Visa. Documents, fees, processing time and application process with Hasb-e-Rabbi Travels.',
+    seoTitle: 'Malaysia eVisa Pakistan – Requirements & Process 2026',
+    seoDescription: 'Malaysia eVisa Pakistani citizens ke liye complete guide. Documents, fee PKR 15,000–25,000, processing 5–10 days, MDAC card info. Online apply — HasbeRabbi Travels.',
   },
   'turkey': {
     name: 'Turkey',
     flag: '🇹🇷',
     types: ['e-Visa (Tourist & Business)', 'Sticker Tourist Visa (Embassy Route)'],
-    fee: 'PKR 25,000 – 35,000 (including service charges)',
+    fee: 'PKR 52,000 – 75,000 (including service charges)',
     feeBreakdown: [
       'e-Visa (if eligible): Approx PKR 15,000 – 25,000',
       'Sticker Tourist Visa (Embassy route): Approx PKR 22,000 – 35,000',
@@ -178,6 +192,8 @@ const countriesData: Record<string, {
     feeNote: 'Exact government fee is shown at evisa.gov.tr during application. Our service charges are separate. Fee is subject to change.',
     processing: '1–3 working days for e-Visa (usually 24–72 hours). Sticker visa may take longer.',
     validity: '30–90 days (depending on approval type)',
+    ogImage: 'https://images.pexels.com/photos/3889843/pexels-photo-3889843.jpeg?w=1200',
+    schemaKeywords: ['Turkey visa Pakistan', 'Turkey eVisa Pakistan', 'Istanbul visa Pakistan', 'Turkey tourist visa'],
     eligibilityNote: 'Pakistani ordinary passport holders are eligible for Turkey e-Visa only if they hold a valid Schengen Visa, USA Visa, UK Visa, Ireland Visa, or a valid residence permit from any of these countries. Without this, applicants must apply for a Sticker Tourist Visa through the Turkish Embassy, Consulate, or an authorized visa application center such as Anatolia Travel Services. Always verify your eligibility at www.evisa.gov.tr before applying.',
     documents: [
       'Valid Pakistani passport (minimum 6 months validity recommended)',
@@ -201,8 +217,8 @@ const countriesData: Record<string, {
     ],
     disclaimer: 'This information is provided for general guidance only. Final visa requirements depend on the official rules of the Turkish government. We do not guarantee visa approval.',
     whatsappMsg: 'I need help with Turkey visa',
-    seoTitle: 'Turkey Visa from Pakistan – e-Visa & Tourist Visa Requirements | Hasb-e-Rabbi',
-    seoDescription: 'Complete Turkey visa guide for Pakistani applicants. e-Visa eligibility, Sticker Tourist Visa requirements, documents, fee PKR 15,000–35,000 and processing time. Apply with Hasb-e-Rabbi Travels.',
+    seoTitle: 'Turkey Visa Pakistan – e-Visa & Tourist Visa 2026',
+    seoDescription: 'Turkey e-Visa aur Sticker Tourist Visa guide Pakistani applicants ke liye. Eligibility, documents, fee PKR 25,000–35,000, processing 1–3 days. HasbeRabbi Travels Karachi.',
   },
   'canada': {
     name: 'Canada',
@@ -211,6 +227,8 @@ const countriesData: Record<string, {
     fee: 'PKR 50,000 – 90,000',
     processing: '6–12 weeks (can take longer depending on case)',
     validity: 'Usually 1–5 years multiple entry (maximum up to 10 years or passport expiry)',
+    ogImage: 'https://images.pexels.com/photos/1563256/pexels-photo-1563256.jpeg?w=1200',
+    schemaKeywords: ['Canada visa Pakistan', 'Canada visitor visa TRV', 'Canada student visa Pakistan', 'Canada PR Pakistan'],
     documents: [
       'Valid passport + all previous passports',
       '2 passport size photos (as per IRCC specifications: 35mm x 45mm)',
@@ -233,8 +251,8 @@ const countriesData: Record<string, {
       'Our team helps with document preparation, form filling and consultation only. We do not guarantee visa approval.',
     ],
     whatsappMsg: 'I need help with Canada visa',
-    seoTitle: 'Canada Visitor Visa from Pakistan – Requirements, Fee & Process 2026 | Hasb-e-Rabbi',
-    seoDescription: 'Complete guide for Pakistani applicants for Canada Visitor (TRV), Student & Work Visa. Documents, fees, processing time, biometrics and strong ties tips with Hasb-e-Rabbi Travels.',
+    seoTitle: 'Canada Visitor Visa Pakistan – TRV Requirements 2026',
+    seoDescription: 'Canada Visitor Visa (TRV), Student & Work Permit guide Pakistani applicants ke liye. Documents, fee PKR 50,000–90,000, biometrics info, processing 6–12 weeks. HasbeRabbi.',
   },
   'australia': {
     name: 'Australia',
@@ -243,6 +261,8 @@ const countriesData: Record<string, {
     fee: 'PKR 50,000 – 85,000',
     processing: '4–8 weeks (can take longer in peak periods or complex cases)',
     validity: 'Usually 3–12 months (stay duration decided by case officer)',
+    ogImage: 'https://images.pexels.com/photos/995764/pexels-photo-995764.jpeg?w=1200',
+    schemaKeywords: ['Australia visa Pakistan', 'Australia tourist visa subclass 600', 'Australia student visa Pakistan', 'Australia work visa'],
     documents: [
       'Valid passport (minimum 6 months validity from date of travel)',
       'Recent passport size photos (35mm x 45mm, white background)',
@@ -266,8 +286,8 @@ const countriesData: Record<string, {
       'Our team provides consultation and document preparation support only. We do not guarantee visa approval.',
     ],
     whatsappMsg: 'I need help with Australia visa',
-    seoTitle: 'Australia Visitor Visa (Subclass 600) from Pakistan – Requirements, Fee & Process 2026 | Hasb-e-Rabbi',
-    seoDescription: 'Complete guide for Pakistani applicants for Australia Tourist Visa (Subclass 600), Student & Work Visa. Documents, fees, processing time and strong ties tips with Hasb-e-Rabbi Travels.',
+    seoTitle: 'Australia Visa Pakistan – Subclass 600 Requirements 2026',
+    seoDescription: 'Australia Tourist Visa (Subclass 600), Student & Work Visa guide Pakistani applicants ke liye. Documents, fee PKR 50,000–85,000, biometrics, processing 4–8 weeks. HasbeRabbi.',
   },
 };
 
@@ -281,18 +301,33 @@ export async function generateStaticParams() {
   return Object.keys(countriesData).map((slug) => ({ country: slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ country: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
   const { country: slug } = await params;
   const data = countriesData[slug];
   if (!data) return {};
+
   return {
     title: data.seoTitle,
     description: data.seoDescription,
-    alternates: { canonical: `https://hasberabbi.com/visa-services/${slug}` },
+    keywords: data.schemaKeywords,
+    alternates: {
+      canonical: `https://hasberabbi.com/visa-services/${slug}`,
+    },
     openGraph: {
       title: data.seoTitle,
       description: data.seoDescription,
       url: `https://hasberabbi.com/visa-services/${slug}`,
+      siteName: 'HasbeRabbi',
+      // ✅ OG Image — social sharing pe country ki photo
+      images: data.ogImage ? [{ url: data.ogImage, width: 1200, height: 630 }] : [],
+      locale: 'en_PK',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.seoTitle,
+      description: data.seoDescription,
+      images: data.ogImage ? [data.ogImage] : [],
     },
   };
 }
@@ -303,8 +338,72 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
 
   if (!country) notFound();
 
+  // ✅ Schema Markup — har country ke liye dynamic
+  const schemaMarkup = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `https://hasberabbi.com/visa-services/${slug}/#service`,
+        name: `${country.name} Visa from Pakistan`,
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'HasbeRabbi Visa & Travel Services',
+          url: 'https://hasberabbi.com',
+          telephone: '+923313954965',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Karachi',
+            addressCountry: 'PK',
+          },
+        },
+        description: country.seoDescription,
+        offers: {
+          '@type': 'Offer',
+          price: country.fee,
+          priceCurrency: 'PKR',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'Pakistan',
+        },
+        keywords: country.schemaKeywords?.join(', '),
+      },
+      // ✅ Breadcrumb Schema
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://hasberabbi.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Visa Services',
+            item: 'https://hasberabbi.com/visa-services',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: `${country.name} Visa`,
+            item: `https://hasberabbi.com/visa-services/${slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      {/* ✅ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+      />
+
       {/* Hero */}
       <section className="relative text-white py-24" style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${
@@ -322,18 +421,22 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
         backgroundPosition: 'center',
       }}>
         <div className="container mx-auto px-4">
-          <div className="text-sm text-white/60 mb-6 flex items-center gap-2">
+          {/* ✅ Breadcrumb — visible to user + Google */}
+          <nav aria-label="Breadcrumb" className="text-sm text-white/60 mb-6 flex items-center gap-2">
             <Link href="/" className="hover:text-white transition">Home</Link>
-            <span>›</span>
+            <span aria-hidden="true">›</span>
             <Link href="/visa-services" className="hover:text-white transition">Visa Services</Link>
-            <span>›</span>
-            <span className="text-white">{country.name}</span>
-          </div>
+            <span aria-hidden="true">›</span>
+            <span className="text-white" aria-current="page">{country.name} Visa</span>
+          </nav>
           <div className="flex items-center gap-4 md:gap-6">
-            <span className="text-5xl md:text-7xl">{country.flag}</span>
+            <span className="text-5xl md:text-7xl" role="img" aria-label={`${country.name} flag`}>
+              {country.flag}
+            </span>
             <div>
+              {/* ✅ H1 mein "from Pakistan" add kiya */}
               <h1 className="text-2xl md:text-5xl font-extrabold mb-3">
-                {country.name} Visa
+                {country.name} Visa from Pakistan
               </h1>
               <div className="flex flex-wrap gap-2">
                 {country.types.map((type) => (
@@ -406,8 +509,9 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
 
             {/* Documents */}
             <div className="bg-white border-2 border-gray-100 rounded-2xl p-8 shadow-md">
+              {/* ✅ H2 mein country name add kiya */}
               <h2 className="text-2xl font-extrabold text-primary-dark mb-6">
-                📄 Required Documents
+                📄 {country.name} Visa — Required Documents
               </h2>
               <ul className="space-y-3">
                 {country.documents.map((doc, i) => (
@@ -439,7 +543,7 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
             <div className="flex flex-col gap-6">
               <div className="bg-accent/10 border-l-4 border-accent rounded-r-2xl p-6">
                 <h2 className="text-xl font-extrabold text-primary-dark mb-4">
-                  💡 Important Notes
+                  💡 Important Notes — {country.name} Visa
                 </h2>
                 <ul className="space-y-3">
                   {country.notes.map((note, i) => (
@@ -471,7 +575,7 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
                 <a
                   href={`https://wa.me/923313954965?text=${encodeURIComponent(country.whatsappMsg)}`}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all"
                 >
                   <WhatsAppIcon />
@@ -483,7 +587,7 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
                   href="tel:+923313954965"
                   className="flex items-center justify-center gap-2 w-full mt-3 border-2 border-primary text-primary py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="flex-shrink-0" aria-hidden="true">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
                   <span className="whitespace-nowrap">📞 +92 331 3954965</span>
@@ -498,7 +602,7 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-extrabold text-primary-dark mb-8 text-center">
-            Explore Other Countries
+            Explore Other Visa Services
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {[
@@ -517,8 +621,9 @@ export default async function CountryVisaPage({ params }: { params: Promise<{ co
                   key={c.slug}
                   href={`/visa-services/${c.slug}`}
                   className="flex items-center gap-2 bg-white border-2 border-gray-200 hover:border-primary hover:text-primary px-5 py-3 rounded-full font-semibold text-gray-700 transition-all shadow-sm"
+                  aria-label={`${c.name} visa requirements`}
                 >
-                  <span>{c.flag}</span>
+                  <span role="img" aria-label={`${c.name} flag`}>{c.flag}</span>
                   <span>{c.name}</span>
                 </Link>
               ))}
