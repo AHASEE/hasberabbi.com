@@ -13,7 +13,7 @@ export default function UmrahPage() {
   const packages = [
     {
       title: 'Economy Umrah Package',
-      price: 'PKR 185,000',
+      price: 'PKR 195,000',
       duration: 'Per Person (All Inclusive)',
       image: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=800&q=80',
       features: [
@@ -27,11 +27,11 @@ export default function UmrahPage() {
       seatsLeft: 8,
       installment: 'Or 6 Monthly Installments of PKR 31,000',
       reviews: '⭐⭐⭐⭐⭐ 487 travelers booked this',
-      whatsappText: "I'm interested in Economy Umrah Package (PKR 185,000)"
+      whatsappText: "I'm interested in Economy Umrah Package (PKR 195,000)"
     },
     {
       title: 'Premium Group Package',
-      price: 'PKR 295,000',
+      price: 'PKR 335,000',
       duration: 'Per Person (All Inclusive)',
       image: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=800&q=80',
       features: [
@@ -46,17 +46,16 @@ export default function UmrahPage() {
       ],
       popular: true,
       seatsLeft: 5,
-      installment: 'Or 8 Monthly Installments of PKR 37,000',
       reviews: '⭐⭐⭐⭐⭐ 1,234 travelers booked',
-      whatsappText: "I'm interested in Premium Umrah Package (PKR 295,000)"
+      whatsappText: "I'm interested in Premium Umrah Package (PKR 335,000)"
     },
     {
       title: 'Executive VIP Package',
-      price: 'PKR 450,000',
+      price: 'PKR 455,000',
       duration: 'Per Person (All Inclusive)',
       image: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=800&q=80',
       features: [
-        'Customizable Duration (14-21 Days)',
+        'Customizable Duration (7-21 Days)',
         'Executive Visa Processing',
         '5-Star Clock Tower Hotels',
         'Private GMC/Coaster Transport',
@@ -67,9 +66,8 @@ export default function UmrahPage() {
         'Laundry Services'
       ],
       seatsLeft: 3,
-      installment: 'Or 10 Monthly Installments of PKR 45,000',
       reviews: '⭐⭐⭐⭐⭐ 289 travelers booked',
-      whatsappText: "I'm interested in VIP Package (PKR 450,000)"
+      whatsappText: "I'm interested in VIP Package (PKR 455,000)"
     }
   ];
 

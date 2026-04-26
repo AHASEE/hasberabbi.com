@@ -16,9 +16,8 @@ export default function HomePage() {
             Best Hajj & Umrah Packages 2026 Pakistan
           </h1>
           <p className="hero-subtext">
-            Premium packages starting PKR 185,000 with luxury hotels, expert
-            guidance, and 100% visa approval guarantee. Book now and save PKR
-            20,000!
+            Premium packages starting PKR 195,000 with luxury hotels, expert
+            guidance, and 100% visa approval guarantee.
           </p>
           <div className="hero-buttons flex flex-col md:flex-row gap-4 mt-4">
             <a
@@ -86,7 +85,7 @@ export default function HomePage() {
               <div className="package-content">
                 <h3 className="text-xl font-bold mb-2">Economy Umrah Package</h3>
                 <div className="price-tag font-semibold mb-2">
-                  PKR 185,000
+                  PKR 195,000
                   <small className="block text-sm font-normal">Per Person (All Inclusive)</small>
                 </div>
                 <ul className="features-list list-disc pl-5 mb-4">
@@ -116,7 +115,7 @@ export default function HomePage() {
               <div className="package-content">
                 <h3 className="text-xl font-bold mb-2">Premium Group Package</h3>
                 <div className="price-tag font-semibold mb-2">
-                  PKR 295,000
+                  PKR 335,000
                   <small className="block text-sm font-normal">Per Person (All Inclusive)</small>
                 </div>
                 <ul className="features-list list-disc pl-5 mb-4">
@@ -129,7 +128,7 @@ export default function HomePage() {
                   <li>Expert Group Coordinator</li>
                   <li>24/7 Support Team</li>
                 </ul>
-                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20295,000)"
+                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20335,000)"
                   className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-500 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book Premium Package
@@ -147,11 +146,11 @@ export default function HomePage() {
               <div className="package-content">
                 <h3 className="text-xl font-bold mb-2">Executive VIP Package</h3>
                 <div className="price-tag font-semibold mb-2">
-                  PKR 450,000
+                  PKR 455,000
                   <small className="block text-sm font-normal">Per Person (All Inclusive)</small>
                 </div>
                 <ul className="features-list list-disc pl-5 mb-4">
-                  <li>Customizable Duration (14-21 Days)</li>
+                  <li>Customizable Duration (7-21 Days)</li>
                   <li>Executive Visa Processing</li>
                   <li>5-Star Clock Tower Hotels (Haram View)</li>
                   <li>Private GMC/Coaster Transport</li>
@@ -161,7 +160,7 @@ export default function HomePage() {
                   <li>Fast Track Airport Services</li>
                   <li>Laundry Services Included</li>
                 </ul>
-                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20VIP%20Executive%20Package%20(PKR%20450,000)"
+                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20VIP%20Executive%20Package%20(PKR%20455,000)"
                   className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-500 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book VIP Package
@@ -191,7 +190,7 @@ export default function HomePage() {
                 Hamare packages mein visa processing, air tickets, 3-star se 5-star hotels, AC transport, full board meals, aur experienced Muallims sab kuch included hai. Karachi, Lahore, Islamabad, Rawalpindi, Peshawar aur poore Pakistan mein hum apni services provide karte hain.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Economy package PKR 185,000 se shuru hota hai aur VIP package PKR 450,000 tak available hai. Hum ne aaj tak kisi bhi pilgrim ka visa reject nahi hone diya — yeh hamari 100% visa approval guarantee hai.
+                Economy package PKR 195,000 se shuru hota hai aur VIP package PKR 455,000 tak available hai. Hum ne aaj tak kisi bhi pilgrim ka visa reject nahi hone diya — yeh hamari 100% visa approval guarantee hai.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link href="/umrah-packages"
@@ -336,7 +335,7 @@ export default function HomePage() {
             {[
               {
                 q: 'Umrah package 2026 Pakistan mein kitna price hai?',
-                a: 'Hasb-e-Rabbi ka Economy Umrah Package PKR 185,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai.'
+                a: 'Hasb-e-Rabbi ka Economy Umrah Package PKR 195,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai.'
               },
               {
                 q: 'Umrah visa kitne din mein milta hai Pakistan se?',
@@ -455,7 +454,7 @@ export default function HomePage() {
 
           <div className="packages-grid grid md:grid-cols-3 gap-6">
             {/* Economy Package */}
-            <div className="package-card border rounded-lg shadow p-4 relative">
+            {/* <div className="package-card border rounded-lg shadow p-4 relative">
               <div className="seats-left absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm">
                 🔥 Only 8 Seats Left
               </div>
@@ -495,7 +494,7 @@ export default function HomePage() {
                   ⭐⭐⭐⭐⭐ 487 travelers booked this in 2026
                 </div>
               </div>
-            </div>
+            </div> */}
 {/*  */}
 
 
@@ -513,7 +512,7 @@ export default function HomePage() {
                 "name": "Umrah package 2026 Pakistan mein kitna price hai?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hasb-e-Rabbi ka Economy Umrah Package PKR 185,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai."
+                  "text": "Hasb-e-Rabbi ka Economy Umrah Package PKR 195,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai."
                 }
               },
               {
@@ -592,7 +591,7 @@ export default function HomePage() {
               "ratingValue": "4.9",
               "reviewCount": "892"
             },
-            "priceRange": "PKR 185,000 - PKR 450,000",
+            "priceRange": "PKR 195,000 - PKR 450,000",
             "openingHours": "Mo-Su 00:00-23:59",
             "sameAs": [
               "https://hasberabbi.com"
