@@ -48,14 +48,15 @@
             box-shadow: 0 6px 20px rgba(252, 211, 77, 0.5);
         }
 
+        /* FIXED: WhatsApp button - darker green for better contrast */
         .btn-whatsapp {
-            background: #25D366;
+            background: #128C7E;
             color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
         }
 
         .btn-whatsapp:hover {
-            background: #20BA5A;
+            background: #0d6b60;
             transform: translateY(-3px);
         }
 
@@ -82,7 +83,7 @@
 
         /* Top Bar */
         .top-bar {
-            background: var(--primary-dark);
+            background: linear-gradient(to right, #92400e, #fbbf24);
             color: rgba(255,255,255,0.9);
             padding: 12px 0;
             font-size: 14px;
@@ -106,7 +107,7 @@
             color: var(--accent);
         }
 
-        /* Trust Bar - NEW */
+        /* Trust Bar */
         .trust-bar {
             background: #f0fdf4;
             padding: 15px 0;
@@ -215,23 +216,24 @@
             color: var(--primary-dark);
         }
 
-        /* Hero Section - Optimized (Image instead of video) */
-
+        /* Hero Section */
         .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1920&q=80') center/cover;
-    background-attachment: fixed;
-}
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
 
-        
+        @media (max-width: 768px) {
+            .hero {
+                background: #1a1a1a;
+            }
+        }
 
         .hero-content {
             position: relative;
@@ -276,7 +278,7 @@
             margin-bottom: 30px;
         }
 
-        /* Urgency Banner - NEW */
+        /* Urgency Banner */
         .urgency-banner {
             background: var(--red);
             color: white;
@@ -365,8 +367,8 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: var(--accent);
-            color: var(--primary-dark);
+            background: #b45309;
+            color: white;
             padding: 8px 20px;
             border-radius: 20px;
             font-size: 12px;
@@ -375,11 +377,12 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
+        /* FIXED: seats-left darker red for better contrast */
         .seats-left {
             position: absolute;
             top: 20px;
             left: 20px;
-            background: var(--red);
+            background: #b91c1c;
             color: white;
             padding: 8px 15px;
             border-radius: 20px;
@@ -471,7 +474,7 @@
             margin-top: 20px;
         }
 
-        /* Comparison Table - NEW */
+        /* Comparison Table */
         .comparison-table {
             width: 100%;
             background: white;
@@ -742,14 +745,14 @@
             right: 30px;
             width: 65px;
             height: 65px;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            background: linear-gradient(135deg, #128C7E 0%, #0d6b60 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 8px 25px rgba(18, 140, 126, 0.5);
             z-index: 999;
             animation: bounce 2s infinite;
         }
@@ -794,7 +797,7 @@
             animation: none;
         }
 
-        /* Exit Popup - NEW */
+        /* Exit Popup */
         .exit-popup {
             display: none;
             position: fixed;

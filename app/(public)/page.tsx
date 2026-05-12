@@ -7,8 +7,18 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero" id="home">
-        <div className="hero-content">
+      <section className="hero" id="home" style={{ position: 'relative' }}>
+        {/* Background Image - Next.js optimized */}
+        <Image
+          src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1200&q=70&auto=format&fit=crop"
+          alt="Makkah Masjid al-Haram"
+          fill
+          priority
+          style={{ objectFit: 'cover', zIndex: 0 }}
+        />
+        {/* Dark overlay */}
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.52)', zIndex: 1 }} />
+        <div className="hero-content" style={{ position: 'relative', zIndex: 2 }}>
           <span className="hero-badge">
             ✨ 100% Verified Ministry Approved Travel Agency
           </span>
@@ -76,7 +86,7 @@ export default function HomePage() {
           <div className="packages-grid grid md:grid-cols-3 gap-6">
             {/* Economy Package */}
             <div className="package-card border rounded-lg shadow p-4 relative">
-              <div className="seats-left absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm">
+              <div className="seats-left absolute top-2 right-2 bg-red-700 text-white px-2 py-1 rounded text-sm font-semibold">
                 🔥 Only 8 Seats Left
               </div>
               <div className="package-img mb-4">
@@ -96,8 +106,8 @@ export default function HomePage() {
                   <li>Breakfast Included</li>
                   <li>Ziyarat Tours in Makkah & Madinah</li>
                 </ul>
-                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Economy%20Umrah%20Package%20(PKR%20185,000)"
-                  className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-500 text-white font-semibold"
+                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Economy%20Umrah%20Package%20(PKR%20195,000)"
+                  className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-700 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book Economy Package
                 </a>
@@ -107,8 +117,8 @@ export default function HomePage() {
 
             {/* Premium Package */}
             <div className="package-card popular border rounded-lg shadow p-4 relative">
-              <div className="popular-tag absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 rounded text-sm">⭐ MOST POPULAR</div>
-              <div className="seats-left absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm">🔥 Only 5 Seats Left</div>
+              <div className="popular-tag absolute top-2 left-2 bg-yellow-700 text-white px-2 py-1 rounded text-sm font-semibold">⭐ MOST POPULAR</div>
+              <div className="seats-left absolute top-2 right-2 bg-red-700 text-white px-2 py-1 rounded text-sm font-semibold">🔥 Only 5 Seats Left</div>
               <div className="package-img mb-4">
                 <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?w=500&q=80" alt="Premium Umrah Package Near Haram 2026" className="rounded" />
               </div>
@@ -129,7 +139,7 @@ export default function HomePage() {
                   <li>24/7 Support Team</li>
                 </ul>
                 <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20335,000)"
-                  className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-500 text-white font-semibold"
+                  className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-700 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book Premium Package
                 </a>
@@ -139,7 +149,7 @@ export default function HomePage() {
 
             {/* VIP Package */}
             <div className="package-card border rounded-lg shadow p-4 relative">
-              <div className="seats-left absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm">🔥 Only 3 Seats Left</div>
+              <div className="seats-left absolute top-2 right-2 bg-red-700 text-white px-2 py-1 rounded text-sm font-semibold">🔥 Only 3 Seats Left</div>
               <div className="package-img mb-4">
                 <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=500&q=80" alt="VIP Luxury Umrah Package 2026" className="rounded" />
               </div>
@@ -161,7 +171,7 @@ export default function HomePage() {
                   <li>Laundry Services Included</li>
                 </ul>
                 <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20VIP%20Executive%20Package%20(PKR%20455,000)"
-                  className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-500 text-white font-semibold"
+                  className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-700 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book VIP Package
                 </a>
@@ -327,39 +337,39 @@ export default function HomePage() {
               FAQ
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">
-              Aksar Poochay Janay Walay Sawalat
+              Frequently Asked Questions
             </h2>
-            <p className="text-gray-600">In sawalo ke jawab jo log Google par search karte hain</p>
+            <p className="text-gray-600">Common questions people search on Google about Hajj & Umrah packages</p>
           </div>
           <div className="space-y-4">
             {[
               {
-                q: 'Umrah package 2026 Pakistan mein kitna price hai?',
-                a: 'Hasb-e-Rabbi ka Economy Umrah Package PKR 195,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai.'
+                q: 'What is the price of Umrah package 2026 from Pakistan?',
+                a: 'Hasb-e-Rabbi\'s Economy Umrah Package starts from PKR 195,000 per person, including visa processing, hotel, transport, and meals. Premium package is PKR 335,000 and VIP package is PKR 455,000.'
               },
               {
-                q: 'Umrah visa kitne din mein milta hai Pakistan se?',
-                a: 'Hasb-e-Rabbi ke through Umrah visa 7-10 working days mein mil jaata hai. Hum poori process handle karte hain — aapko sirf documents dene hote hain.'
+                q: 'How many days does it take to get an Umrah visa from Pakistan?',
+                a: 'Through Hasb-e-Rabbi, your Umrah visa is processed within 7-10 working days. We handle the entire process — you only need to provide the required documents.'
               },
               {
-                q: 'Kya Lahore aur Islamabad se bhi Umrah package available hai?',
-                a: 'Haan! Hum Karachi, Lahore, Islamabad, Rawalpindi, Peshawar, Quetta, Multan aur Faisalabad se Umrah aur Hajj packages provide karte hain.'
+                q: 'Are Umrah packages available from Lahore and Islamabad?',
+                a: 'Yes! We provide Hajj and Umrah packages from Karachi, Lahore, Islamabad, Rawalpindi, Peshawar, Quetta, Multan, and Faisalabad across all of Pakistan.'
               },
               {
-                q: 'Hajj 2026 Pakistan se kab shuru hoga?',
-                a: 'Hajj 2026 expected May/June 2026 mein hoga. Pakistan se Hajj quota limited hota hai isliye jaldi registration karwain. Hasb-e-Rabbi se abhi contact karein.'
+                q: 'When will Hajj 2026 depart from Pakistan?',
+                a: 'Hajj 2026 is expected in May/June 2026. Pakistan\'s Hajj quota is limited, so early registration is essential. Contact Hasb-e-Rabbi now to secure your seat.'
               },
               {
-                q: 'Umrah package mein kya kya included hota hai?',
-                a: 'Hamare packages mein Umrah visa processing, round trip air tickets, Makkah aur Madinah mein hotel accommodation, AC transport, meals, ziyarat tours aur experienced Muallim sab kuch included hai.'
+                q: 'What is included in a Hasb-e-Rabbi Umrah package?',
+                a: 'Our Umrah packages include visa processing, round-trip air tickets, hotel accommodation in Makkah and Madinah, AC transport, full board meals, Ziyarat tours, and an experienced Muallim guide.'
               },
               {
-                q: 'Kya Hasb-e-Rabbi Ministry approved hai?',
-                a: 'Haan! Hasb-e-Rabbi Travels & Tours Ministry of Religious Affairs Pakistan se officially approved travel agency hai — registration number MRA/423. Hum 2013 se registered aur operating hain.'
+                q: 'Is Hasb-e-Rabbi a Ministry approved travel agency?',
+                a: 'Yes! Hasb-e-Rabbi Travels & Tours is officially approved by the Ministry of Religious Affairs Pakistan — registration number MRA/423. We have been registered and operating since 2013.'
               },
               {
-                q: 'Umrah ke liye kya documents chahiye Pakistan se?',
-                a: 'Umrah ke liye valid passport (6 months validity), CNIC copy, 2 passport size photos, aur Mahram certificate (khawatin ke liye) chahiye. Hasb-e-Rabbi ki team poori guidance provide karti hai.'
+                q: 'What documents are required for Umrah from Pakistan?',
+                a: 'You need a valid passport (minimum 6 months validity), CNIC copy, 2 passport-size photographs, and a Mahram certificate for female applicants. Our team provides complete guidance throughout.'
               },
             ].map((faq, i) => (
               <details key={i} className="bg-white border border-gray-200 rounded-xl p-6 cursor-pointer group">
@@ -509,58 +519,58 @@ export default function HomePage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Umrah package 2026 Pakistan mein kitna price hai?",
+                "name": "What is the price of Umrah package 2026 from Pakistan?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hasb-e-Rabbi ka Economy Umrah Package PKR 195,000 per person se shuru hota hai jisme visa, hotel, transport aur meals sab included hain. Premium package PKR 295,000 aur VIP package PKR 450,000 mein available hai."
+                  "text": "Hasb-e-Rabbi's Economy Umrah Package starts from PKR 195,000 per person, which includes visa processing, hotel accommodation, transport, and meals. Premium package is available at PKR 335,000 and VIP package at PKR 455,000."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Umrah visa kitne din mein milta hai Pakistan se?",
+                "name": "How many days does it take to get an Umrah visa from Pakistan?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hasb-e-Rabbi ke through Umrah visa 7-10 working days mein mil jaata hai. Hum poori process handle karte hain — aapko sirf documents dene hote hain."
+                  "text": "Through Hasb-e-Rabbi, your Umrah visa is processed within 7-10 working days. We handle the entire process — you only need to provide the required documents."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya Lahore aur Islamabad se bhi Umrah package available hai?",
+                "name": "Are Umrah packages available from Lahore and Islamabad?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Haan! Hum Karachi, Lahore, Islamabad, Rawalpindi, Peshawar, Quetta, Multan aur Faisalabad se Umrah aur Hajj packages provide karte hain."
+                  "text": "Yes! We provide Hajj and Umrah packages from Karachi, Lahore, Islamabad, Rawalpindi, Peshawar, Quetta, Multan, and Faisalabad across all of Pakistan."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Hajj 2026 Pakistan se kab shuru hoga?",
+                "name": "When will Hajj 2026 depart from Pakistan?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hajj 2026 expected May/June 2026 mein hoga. Pakistan se Hajj quota limited hota hai isliye jaldi registration karwain. Hasb-e-Rabbi se abhi contact karein."
+                  "text": "Hajj 2026 is expected in May/June 2026. Pakistan's Hajj quota is limited, so early registration is essential. Contact Hasb-e-Rabbi now to secure your seat."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Umrah package mein kya kya included hota hai?",
+                "name": "What is included in a Hasb-e-Rabbi Umrah package?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hamare packages mein Umrah visa processing, round trip air tickets, Makkah aur Madinah mein hotel accommodation, AC transport, meals, ziyarat tours aur experienced Muallim sab kuch included hai."
+                  "text": "Our Umrah packages include visa processing, round-trip air tickets, hotel accommodation in Makkah and Madinah, air-conditioned transport, full board meals, Ziyarat tours, and an experienced Muallim guide."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya Hasb-e-Rabbi Ministry approved hai?",
+                "name": "Is Hasb-e-Rabbi a Ministry approved travel agency?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Haan! Hasb-e-Rabbi Travels & Tours Ministry of Religious Affairs Pakistan se officially approved travel agency hai — registration number MRA/423. Hum 2013 se registered aur operating hain."
+                  "text": "Yes! Hasb-e-Rabbi Travels & Tours is officially approved by the Ministry of Religious Affairs Pakistan — registration number MRA/423. We have been registered and operating since 2013."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Umrah ke liye kya documents chahiye Pakistan se?",
+                "name": "What documents are required for Umrah from Pakistan?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Umrah ke liye valid passport (6 months validity), CNIC copy, 2 passport size photos, aur Mahram certificate (khawatin ke liye) chahiye. Hasb-e-Rabbi ki team poori guidance provide karti hai."
+                  "text": "For Umrah from Pakistan, you need a valid passport (minimum 6 months validity), CNIC copy, 2 passport-size photographs, and a Mahram certificate for female applicants. Hasb-e-Rabbi's team provides complete guidance throughout the process."
                 }
               }
             ]
