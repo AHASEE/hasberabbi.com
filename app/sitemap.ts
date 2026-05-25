@@ -4,7 +4,6 @@ import { MetadataRoute } from 'next';
 const visaCountrySlugs = [
   'saudi-arabia',
   'uae-dubai',
-  'united-kingdom',
   'schengen-europe',
   'malaysia',
   'turkey',
@@ -35,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   return [
-    // ✅ Homepage — 'always' ki jagah 'daily' use kiya (Google 'always' ignore karta hai)
+    // ✅ Homepage
     {
       url: 'https://hasberabbi.com',
       lastModified: new Date(),
@@ -43,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
 
-    // ✅ Important static pages — pehle missing thay
+    // ✅ Important static pages
     {
       url: 'https://hasberabbi.com/about',
       lastModified: new Date(),
@@ -57,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     },
 
-    // Blog listing page
+    // ✅ Blog listing page
     {
       url: 'https://hasberabbi.com/blog',
       lastModified: new Date(),
@@ -65,32 +64,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
 
-    // Umrah & Hajj — high intent pages
+    // ✅ Manually added blog
+    {
+      url: 'https://hasberabbi.com/blog/complete-guide-to-haramain-high-speed-railway-hhr-train-fares-2026',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+
+    // ✅ Umrah & Hajj pages
     {
       url: 'https://hasberabbi.com/umrah-packages',
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.9, // ✅ 0.8 se 0.9 — high commercial intent page
+      priority: 0.9,
     },
     {
       url: 'https://hasberabbi.com/hajj-packages',
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.9, // ✅ 0.8 se 0.9
+      priority: 0.9,
     },
 
-    // Visa services main page
+    // ✅ Visa services main page
     {
       url: 'https://hasberabbi.com/visa-services',
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.8, // ✅ 0.7 se 0.8 — important service page
+      priority: 0.8,
     },
 
     // ✅ Visa country detail pages
     ...visaCountryUrls,
 
-    // ✅ Blog posts (dynamic)
+    // ✅ Dynamic blog posts
     ...blogUrls,
   ];
 }
