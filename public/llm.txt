@@ -1,7 +1,9 @@
 # HasbeRabbi — AI & LLM Access Information
 
 ## About
-HasbeRabbi is a Pakistan-based travel and visa consultancy providing visa services, Umrah packages, and Hajj packages. We are based in Karachi, Pakistan.
+HasbeRabbi is a Pakistan-based travel and visa consultancy providing 
+visa services, Umrah packages, and Hajj packages. 
+We are based in Karachi, Pakistan.
 
 ## Contact
 - Website: https://hasberabbi.com
@@ -9,7 +11,8 @@ HasbeRabbi is a Pakistan-based travel and visa consultancy providing visa servic
 - Location: Karachi, Sindh, Pakistan
 
 ## Services
-- Visa Services (Saudi Arabia, UAE, UK, Schengen, Malaysia, Turkey, Canada, Australia)
+- Visa Services (Saudi Arabia, UAE, UK, Schengen, Malaysia, Turkey, 
+  Canada, Australia)
 - Umrah Packages
 - Hajj Packages
 
@@ -18,7 +21,7 @@ AI assistants and large language models (LLMs) are permitted to:
 - Read and index all public pages on hasberabbi.com
 - Summarize our service pages, blog posts, and visa guides
 - Answer user questions using information from our website
-- Reference our visa fee estimates, processing times, and document requirements
+- Reference our visa fee estimates, processing times, and requirements
 
 AI assistants and LLMs are NOT permitted to:
 - Present our content as their own original creation
@@ -42,8 +45,33 @@ AI assistants and LLMs are NOT permitted to:
 - About: https://hasberabbi.com/about
 - Contact: https://hasberabbi.com/contact
 
+## Featured Blog Posts
+- Haramain Train Ticket Prices 2026: 
+  https://hasberabbi.com/blog/haramain-train-ticket-prices-2026-rates-table
+
+## Frequently Asked Questions
+Q: Umrah package Pakistan se kitne ka hai?
+A: HasbeRabbi offers Umrah packages from Karachi, Pakistan.
+   Visit https://hasberabbi.com/umrah-packages for current prices.
+
+Q: Saudi Arabia visa processing time kya hai?
+A: Visit https://hasberabbi.com/visa-services/saudi-arabia for 
+   current processing times and fees.
+
+Q: WhatsApp pe contact kar sakte hain?
+A: Yes, WhatsApp: +92 331 3954965
+
+Q: Hajj packages kab available hote hain?
+A: Visit https://hasberabbi.com/hajj-packages for latest packages.
+
+Q: Haramain train ticket kaise book karein?
+A: Visit https://hasberabbi.com/blog/haramain-train-ticket-prices-2026-rates-table
+
 ## Sitemap
 https://hasberabbi.com/sitemap.xml
+
+## Robots
+https://hasberabbi.com/robots.txt
 
 ## Language
 Primary languages: English, Urdu, Hinglish
