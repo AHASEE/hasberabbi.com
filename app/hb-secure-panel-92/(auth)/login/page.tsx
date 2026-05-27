@@ -26,7 +26,7 @@ export default function AdminLogin() {
       if (result?.error) {
         setError('Invalid email or password');
       } else {
-        router.push('/admin');
+       router.push('/hb-secure-panel-92');
         router.refresh();
       }
     } catch (err) {
