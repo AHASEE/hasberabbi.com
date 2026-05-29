@@ -253,7 +253,7 @@ export default function HomePage() {
             {[
               { icon: '🏆', title: 'Ministry Approved', desc: 'Ministry of Religious Affairs Pakistan se officially approved travel agency — MRA/423' },
               { icon: '✅', title: '100% Visa Approval', desc: '12 saalon mein kisi bhi pilgrim ka visa reject nahi hua — yeh hamari guarantee hai' },
-              { icon: '💰', title: 'Best Price Guarantee', desc: 'Economy package PKR 185,000 se shuru — poore Pakistan mein best rates guaranteed' },
+              { icon: '💰', title: 'Best Price Guarantee', desc: 'Economy package PKR 195,000 se shuru — poore Pakistan mein best rates guaranteed' },
               { icon: '🕌', title: 'Expert Muallims', desc: 'Trained aur experienced Muallims har group ke saath — poora Hajj aur Umrah guide karte hain' },
               { icon: '✈️', title: 'Complete Package', desc: 'Visa, air tickets, hotels, transport, meals — sab kuch ek jagah se without koi tension' },
               { icon: '📞', title: '24/7 Support', desc: 'Safar ke doran raat din humari team available — Makkah aur Madinah mein bhi' },
@@ -401,7 +401,7 @@ export default function HomePage() {
             <span className="text-amber-400">Abhi Book Karen!</span>
           </h2>
           <p className="text-lg md:text-xl mb-10 text-white/80 max-w-xl mx-auto">
-            Limited seats available — PKR 185,000 se shuru. Free consultation ke liye abhi contact karen!
+            Limited seats available — PKR 195,000 se shuru. Free consultation ke liye abhi contact karen!
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="https://wa.me/923313954965?text=Assalamualaikum!%20I%20want%20to%20book%20Hajj/Umrah%20package"
@@ -478,18 +478,16 @@ export default function HomePage() {
               <div className="package-content">
                 <h3 className="text-xl font-bold mb-2">Economy Umrah Package</h3>
                 <div className="price-tag font-semibold mb-2">
-                  PKR 185,000
+                  PKR 195,000
                   <small className="block text-sm font-normal">
                     Per Person (All Inclusive)
                   </small>
                 </div>
-                <div className="installment mb-2">💳 Or 6 Monthly Installments of PKR 31,000</div>
                 <ul className="features-list list-disc pl-5 mb-4">
                   <li>10 Days / 9 Nights Duration</li>
                   <li>Visa Processing Included</li>
-                  <li>3-Star Hotel (600m from Haram)</li>
+                  <li>3-Star Hotel </li>
                   <li>Shared AC Transport</li>
-                  <li>Breakfast Included</li>
                   <li>Ziyarat Tours in Makkah & Madinah</li>
                 </ul>
                 <a

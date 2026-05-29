@@ -51,7 +51,7 @@ const schema = {
     "addressCountry": "PK"
   },
   "openingHours": "Mo-Sa 09:00-21:00",
-  "priceRange": "PKR 185,000 - PKR 1,250,000",
+  "priceRange": "PKR 195,000 - PKR 1,250,000",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
