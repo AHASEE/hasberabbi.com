@@ -101,9 +101,8 @@ export default function HomePage() {
                 <ul className="features-list list-disc pl-5 mb-4">
                   <li>10 Days / 9 Nights Duration</li>
                   <li>Visa Processing Included</li>
-                  <li>3-Star Hotel (600m from Haram)</li>
+                  <li>3-Star Hotel </li>
                   <li>Shared AC Transport</li>
-                  <li>Breakfast Included</li>
                   <li>Ziyarat Tours in Makkah & Madinah</li>
                 </ul>
                 <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Economy%20Umrah%20Package%20(PKR%20195,000)"
