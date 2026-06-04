@@ -72,6 +72,13 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
     fetchCategoriesAndCountries();
   }, []);
 
+  // ✅ FIX: Edit mode mein editor mein latest content load karo
+  useEffect(() => {
+    if (editor && blog?.content) {
+      editor.commands.setContent(blog.content);
+    }
+  }, [editor]);
+
   async function fetchCategoriesAndCountries() {
     try {
       const [catRes, countryRes] = await Promise.all([
