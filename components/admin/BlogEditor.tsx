@@ -136,10 +136,14 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
     e.preventDefault();
     setLoading(true);
     setError('');
+
     try {
+      // ✅ FIX: Hamesha editor se latest HTML lo
+      const latestContent = editor?.getHTML() || formData.content;
+
       if (!formData.title.trim()) { setError('Title is required'); setLoading(false); return; }
       if (!formData.slug.trim()) { setError('Slug is required'); setLoading(false); return; }
-      if (!formData.content.trim()) { setError('Content is required'); setLoading(false); return; }
+      if (!latestContent.trim() || latestContent === '<p></p>') { setError('Content is required'); setLoading(false); return; }
 
       const url = mode === 'create' ? '/api/blog' : `/api/blog/${blog.id}`;
       const method = mode === 'create' ? 'POST' : 'PATCH';
@@ -147,7 +151,8 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
       const response = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        // ✅ FIX: latestContent bhejo, formData.content nahi
+        body: JSON.stringify({ ...formData, content: latestContent }),
       });
 
       const data = await response.json();
@@ -336,7 +341,6 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
             {uploading && <span className="text-sm text-primary">⏳ Uploading...</span>}
           </div>
 
-          {/* ✅ FIX: EditorContent with proper styling */}
           <EditorContent
             editor={editor}
             className="border border-gray-300 rounded-b-lg bg-white min-h-[300px]"
