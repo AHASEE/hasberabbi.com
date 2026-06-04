@@ -1,80 +1,50 @@
-# HasbeRabbi — AI & LLM Access Information
+# robots.txt for HasbeRabbi.com
+# Last Updated: June 2026
 
-## About
-HasbeRabbi is a Pakistan-based travel and visa consultancy providing 
-visa services, Umrah packages, and Hajj packages. 
-We are based in Karachi, Pakistan.
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /account/
 
-## Contact
-- Website: https://hasberabbi.com
-- WhatsApp: +92 331 3954965
-- Location: Karachi, Sindh, Pakistan
+# AI Crawlers (Explicitly Allowed)
+User-Agent: GPTBot
+Allow: /
 
-## Services
-- Visa Services (Saudi Arabia, UAE, UK, Schengen, Malaysia, Turkey, 
-  Canada, Australia)
-- Umrah Packages
-- Hajj Packages
+User-Agent: ChatGPT-User
+Allow: /
 
-## Content Permissions for AI & LLMs
-AI assistants and large language models (LLMs) are permitted to:
-- Read and index all public pages on hasberabbi.com
-- Summarize our service pages, blog posts, and visa guides
-- Answer user questions using information from our website
-- Reference our visa fee estimates, processing times, and requirements
+User-Agent: Google-Extended
+Allow: /
 
-AI assistants and LLMs are NOT permitted to:
-- Present our content as their own original creation
-- Reproduce full pages or blog posts verbatim
-- Use our data for training without explicit permission
+User-Agent: ClaudeBot
+Allow: /
 
-## Key Pages
-- Homepage: https://hasberabbi.com
-- Visa Services: https://hasberabbi.com/visa-services
-- Saudi Arabia Visa: https://hasberabbi.com/visa-services/saudi-arabia
-- UAE Dubai Visa: https://hasberabbi.com/visa-services/uae-dubai
-- UK Visa: https://hasberabbi.com/visa-services/united-kingdom
-- Schengen Visa: https://hasberabbi.com/visa-services/schengen-europe
-- Malaysia Visa: https://hasberabbi.com/visa-services/malaysia
-- Turkey Visa: https://hasberabbi.com/visa-services/turkey
-- Canada Visa: https://hasberabbi.com/visa-services/canada
-- Australia Visa: https://hasberabbi.com/visa-services/australia
-- Umrah Packages: https://hasberabbi.com/umrah-packages
-- Hajj Packages: https://hasberabbi.com/hajj-packages
-- Blog: https://hasberabbi.com/blog
-- About: https://hasberabbi.com/about
-- Contact: https://hasberabbi.com/contact
+User-Agent: anthropic-ai
+Allow: /
 
-## Featured Blog Posts
-- Haramain Train Ticket Prices 2026: 
-  https://hasberabbi.com/blog/haramain-train-ticket-prices-2026-rates-table
+User-Agent: PerplexityBot
+Allow: /
 
-## Frequently Asked Questions
-Q: Umrah package Pakistan se kitne ka hai?
-A: HasbeRabbi offers Umrah packages from Karachi, Pakistan.
-   Visit https://hasberabbi.com/umrah-packages for current prices.
+User-Agent: Grok
+Allow: /
 
-Q: Saudi Arabia visa processing time kya hai?
-A: Visit https://hasberabbi.com/visa-services/saudi-arabia for 
-   current processing times and fees.
+User-Agent: xAI-Bot
+Allow: /
 
-Q: WhatsApp pe contact kar sakte hain?
-A: Yes, WhatsApp: +92 331 3954965
+User-Agent: CCBot
+Allow: /
 
-Q: Hajj packages kab available hote hain?
-A: Visit https://hasberabbi.com/hajj-packages for latest packages.
+# Major Search Engines
+User-Agent: Googlebot
+Allow: /
 
-Q: Haramain train ticket kaise book karein?
-A: Visit https://hasberabbi.com/blog/haramain-train-ticket-prices-2026-rates-table
+User-Agent: Bingbot
+Allow: /
 
-## Sitemap
-https://hasberabbi.com/sitemap.xml
-
-## Robots
-https://hasberabbi.com/robots.txt
-
-## Language
-Primary languages: English, Urdu, Hinglish
-
-## Last Updated
-MAY 2026
+# Sitemap & Host
+Sitemap: https://hasberabbi.com/sitemap.xml
+Host: https://hasberabbi.com

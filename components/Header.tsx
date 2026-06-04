@@ -24,7 +24,7 @@ export default function Header() {
     <>
       {/* Top Bar */}
       <div className="bg-gradient-to-r from-yellow-500 to-amber-600 text-black/90 py-3">
-        <div className="container mx-auto px-4 flex flex-col items-center gap-2 text-sm md:flex-row md:justify-between md:items-center">
+        <div className="container mx-auto flex flex-col items-center gap-2 text-sm md:flex-row md:justify-between md:items-center">
           <div className="text-center md:text-left">
             📍 Serving Clients Across Pakistan Since 2013
           </div>
@@ -41,7 +41,7 @@ export default function Header() {
 
       {/* Trust Bar */}
       <div className="bg-emerald-50 border-b-2 border-primary-light py-4">
-        <div className="container mx-auto px-4 flex justify-around items-center flex-wrap gap-4 text-sm font-semibold text-primary-dark">
+        <div className="container mx-auto flex justify-around items-center flex-wrap gap-4 text-sm font-semibold text-primary-dark">
           <div className="flex items-center gap-2"><span>🏆</span> Ministry Approved MRA/423</div>
           <div className="flex items-center gap-2"><span>⭐</span> 4.9/5 (892 Reviews)</div>
           <div className="flex items-center gap-2"><span>📺</span> Featured on Geo News</div>
@@ -51,7 +51,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header className="bg-white/98 backdrop-blur-lg sticky top-0 z-[999] shadow-md">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="flex justify-between items-center h-20">
 
             {/* Logo */}
@@ -148,7 +148,7 @@ export default function Header() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <nav className="md:hidden py-4 flex flex-col gap-4 border-t">
+            <nav className="md:hidden py-4 pb-6 flex flex-col gap-4 border-t">
               <Link href="/" className="text-gray-700 font-bold hover:text-primary" onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>

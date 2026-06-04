@@ -3,19 +3,55 @@ export default function robots() {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/blog', '/blog/', '/visa-services', '/visa-services/', 
-                '/umrah-packages', '/hajj-packages', '/about', '/contact'],
-        disallow: ['/api/', '/admin/', '/_next/', '/private/'],
+        allow: ['/'],
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/_next/',
+          '/private/',
+          '/dashboard/',
+          '/account/',
+          '/login/',
+          '/register/',
+        ],
       },
-      { userAgent: 'GPTBot', allow: '/' },
-      { userAgent: 'PerplexityBot', allow: '/' },
-      { userAgent: 'ClaudeBot', allow: '/' },
-      { userAgent: 'anthropic-ai', allow: '/' },
-      { userAgent: 'Bingbot', allow: '/' },
-      { userAgent: 'Googlebot', allow: '/' },
-      { userAgent: 'Google-Extended', allow: '/' },
-      { userAgent: 'Grok', allow: '/' },
-      { userAgent: 'xAI-Bot', allow: '/' },
+      // AI Crawlers - Explicitly Allowed
+      {
+        userAgent: 'GPTBot',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'Google-Extended',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'anthropic-ai',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'Grok',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'xAI-Bot',
+        allow: ['/'],
+      },
+      {
+        userAgent: 'CCBot',
+        allow: ['/'],
+      },
     ],
     host: 'https://hasberabbi.com',
     sitemap: 'https://hasberabbi.com/sitemap.xml',

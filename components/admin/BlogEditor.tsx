@@ -50,13 +50,21 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
   const editor = useEditor({
     immediatelyRender: false,
     extensions: [
-      StarterKit,
-      LinkExtension.configure({ openOnClick: false }),
+      StarterKit.configure({
+        link: false,
+      }),
+      LinkExtension.configure({
+        openOnClick: false,
+      }),
       ImageExtension,
     ],
-    content: formData.content,
+    content: formData.content || '<p>Start writing...</p>',
     onUpdate: ({ editor }) => {
-      setFormData(prev => ({ ...prev, content: editor.getHTML() }));
+      const html = editor.getHTML();
+      setFormData((prev) => ({
+        ...prev,
+        content: html,
+      }));
     },
   });
 
@@ -327,8 +335,13 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
             </label>
             {uploading && <span className="text-sm text-primary">⏳ Uploading...</span>}
           </div>
-          <EditorContent editor={editor}
-            className="prose max-w-none border border-t-0 border-gray-300 rounded-b-lg p-4 min-h-[300px] bg-white" />
+
+          {/* ✅ FIX: EditorContent with proper styling */}
+          <EditorContent
+            editor={editor}
+            className="border border-gray-300 rounded-b-lg bg-white min-h-[300px]"
+          />
+
           <p className="text-xs text-gray-500 mt-1">{formData.content.length} characters</p>
         </div>
 
