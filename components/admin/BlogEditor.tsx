@@ -6,6 +6,10 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import LinkExtension from '@tiptap/extension-link';
 import ImageExtension from '@tiptap/extension-image';
+import { Table } from '@tiptap/extension-table';
+import { TableRow } from '@tiptap/extension-table-row';
+import { TableCell } from '@tiptap/extension-table-cell';
+import { TableHeader } from '@tiptap/extension-table-header';
 
 interface Category {
   id: string;
@@ -57,6 +61,11 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
         openOnClick: false,
       }),
       ImageExtension,
+      // ✅ Table extensions
+      Table.configure({ resizable: true }),
+      TableRow,
+      TableCell,
+      TableHeader,
     ],
     content: formData.content || '<p>Start writing...</p>',
     onUpdate: ({ editor }) => {
@@ -72,7 +81,7 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
     fetchCategoriesAndCountries();
   }, []);
 
-  // ✅ FIX: Edit mode mein editor mein latest content load karo
+  // ✅ Edit mode mein editor mein latest content load karo
   useEffect(() => {
     if (editor && blog?.content) {
       editor.commands.setContent(blog.content);
@@ -139,13 +148,17 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
     if (url) editor?.chain().focus().setLink({ href: url }).run();
   };
 
+  // ✅ Table insert karne ka function
+  const handleInsertTable = () => {
+    editor?.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
     try {
-      // ✅ FIX: Hamesha editor se latest HTML lo
       const latestContent = editor?.getHTML() || formData.content;
 
       if (!formData.title.trim()) { setError('Title is required'); setLoading(false); return; }
@@ -158,7 +171,6 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
       const response = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
-        // ✅ FIX: latestContent bhejo, formData.content nahi
         body: JSON.stringify({ ...formData, content: latestContent }),
       });
 
@@ -339,6 +351,30 @@ export default function BlogEditor({ mode, blog }: BlogEditorProps) {
                 className="px-3 py-1 rounded bg-red-100 text-red-600 text-sm">
                 ✂️ Remove Link
               </button>
+            )}
+            {/* ✅ Table button */}
+            <button type="button" onClick={handleInsertTable}
+              className="px-3 py-1 rounded bg-white hover:bg-gray-100">
+              🗃️ Table
+            </button>
+            {editor?.isActive('table') && (
+              <>
+                <button type="button"
+                  onClick={() => editor?.chain().focus().addColumnAfter().run()}
+                  className="px-3 py-1 rounded bg-white text-xs hover:bg-gray-100">
+                  +Col
+                </button>
+                <button type="button"
+                  onClick={() => editor?.chain().focus().addRowAfter().run()}
+                  className="px-3 py-1 rounded bg-white text-xs hover:bg-gray-100">
+                  +Row
+                </button>
+                <button type="button"
+                  onClick={() => editor?.chain().focus().deleteTable().run()}
+                  className="px-3 py-1 rounded bg-red-100 text-red-600 text-xs">
+                  🗑️ Del Table
+                </button>
+              </>
             )}
             <label className="px-3 py-1 rounded bg-white cursor-pointer hover:bg-gray-100">
               🖼️ Image

@@ -47,7 +47,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   }
 
   return (
-    <main className="max-w-4xl mx-auto px-6 sm:px-8 md:px-10 py-10">
+    <main className="max-w-4xl mx-auto px-8 sm:px-10 md:px-12 py-10">
       {/* Featured Image */}
       {blog.featuredImage && (
         <img
@@ -77,7 +77,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       </div>
 
       {/* Blog Content */}
-      <div className="w-full min-w-0">
+      <div className="w-full min-w-0 overflow-x-auto">
         <article
           className="
             prose
@@ -101,9 +101,9 @@ export default async function BlogPage({ params }: BlogPageProps) {
             hover:prose-a:underline
 
             prose-ul:list-disc
-            prose-ul:pl-6
+            prose-ul:pl-8
             prose-ol:list-decimal
-            prose-ol:pl-6
+            prose-ol:pl-8
             prose-li:my-1
           "
           dangerouslySetInnerHTML={{ __html: blog.content }}
