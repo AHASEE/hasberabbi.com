@@ -31,7 +31,7 @@ export default function UmrahPage() {
     },
     {
       title: 'Premium Group Package',
-      price: 'PKR 335,000',
+      price: 'PKR 345,000',
       duration: 'Per Person (All Inclusive)',
       image: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=800&q=80',
       features: [
@@ -47,7 +47,7 @@ export default function UmrahPage() {
       popular: true,
       seatsLeft: 5,
       reviews: '⭐⭐⭐⭐⭐ 1,234 travelers booked',
-      whatsappText: "I'm interested in Premium Umrah Package (PKR 335,000)"
+      whatsappText: "I'm interested in Premium Umrah Package (PKR 345,000)"
     },
     {
       title: 'Executive VIP Package',

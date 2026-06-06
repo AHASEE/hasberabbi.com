@@ -124,7 +124,7 @@ export default function HomePage() {
               <div className="package-content">
                 <h3 className="text-xl font-bold mb-2">Premium Group Package</h3>
                 <div className="price-tag font-semibold mb-2">
-                  PKR 335,000
+                  PKR 345,000
                   <small className="block text-sm font-normal">Per Person (All Inclusive)</small>
                 </div>
                 <ul className="features-list list-disc pl-5 mb-4">
