@@ -45,6 +45,9 @@ const nextConfig = {
       { source: '/umrah', destination: '/umrah-packages', permanent: true },
       { source: '/hajj', destination: '/hajj-packages', permanent: true },
       { source: '/visa', destination: '/visa-services', permanent: true },
+      { source: '/admin', destination: '/hb-secure-panel-92', permanent: true },
+{ source: '/admin/:path*', destination: '/hb-secure-panel-92/:path*', permanent: true },
+{ source: '/hb-secure-panel-92/new', destination: '/hb-secure-panel-92/blogs/new', permanent: true },
     ]
   },
 }
