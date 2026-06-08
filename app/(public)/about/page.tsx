@@ -145,11 +145,11 @@ export default function AboutPage() {
     </p>
 
     <div className="flex gap-4 justify-center flex-wrap">
-      <a href="https://wa.me/923313954965"
+      <a href="https://wa.me/923322352945"
         className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all">
         💬 WhatsApp Us Now
       </a>
-      <a href="tel:+923313954965"
+      <a href="tel:+923322352945"
         className="bg-amber-400 hover:bg-amber-500 text-black px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all">
         📞 Call Now
       </a>

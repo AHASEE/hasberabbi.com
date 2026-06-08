@@ -30,14 +30,14 @@ export default function ContactPage() {
                   <span className="text-3xl">📍</span>
                   <div>
                     <h3 className="font-bold text-lg">Office Address</h3>
-                    <p className="text-gray-600">Office 202, Dolmen Center, Karachi, Pakistan</p>
+                    <p className="text-gray-600">Office 202, Lavish mall, Karachi, Pakistan</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <span className="text-3xl">📞</span>
                   <div>
                     <h3 className="font-bold text-lg">Phone</h3>
-                    <a href="tel:+923313954965" className="text-primary hover:underline">+92 331 3954965</a>
+                    <a href="tel:+92332352945" className="text-primary hover:underline">+92 332 352945</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -57,7 +57,7 @@ export default function ContactPage() {
               </div>
 
               {/* WhatsApp Button */}
-              <a href="https://wa.me/923313954965?text=Assalamualaikum! I need help"
+              <a href="https://wa.me/92332352945?text=Assalamualaikum please give me umrah package information! "
                 className="mt-8 inline-block bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition">
                 💬 WhatsApp 24/7
               </a>

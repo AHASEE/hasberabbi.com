@@ -137,7 +137,7 @@ export default function HomePage() {
                   <li>Expert Group Coordinator</li>
                   <li>24/7 Support Team</li>
                 </ul>
-                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20335,000)"
+                <a href="https://wa.me/923322352945?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20335,000)"
                   className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-700 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book Premium Package
@@ -169,7 +169,7 @@ export default function HomePage() {
                   <li>Fast Track Airport Services</li>
                   <li>Laundry Services Included</li>
                 </ul>
-                <a href="https://wa.me/923313954965?text=I'm%20interested%20in%20VIP%20Executive%20Package%20(PKR%20455,000)"
+                <a href="https://wa.me/923322352945?text=I'm%20interested%20in%20VIP%20Executive%20Package%20(PKR%20455,000)"
                   className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-700 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book VIP Package
@@ -437,7 +437,7 @@ export default function HomePage() {
               Our experts are available 24/7
             </p>
             
-              <a href="https://wa.me/923313954965?text=Help%20me%20choose%20package"
+              <a href="https://wa.me/923322352945?text=Help%20me%20choose%20package"
               target="_blank"
               className="inline-block bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all"
             >

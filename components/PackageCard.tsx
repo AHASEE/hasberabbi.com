@@ -73,7 +73,7 @@ export default function PackageCard({
         </ul>
 
         
-         <a href={`https://wa.me/923313954965?text=${encodeURIComponent(whatsappText)}`}
+         <a href={`https://wa.me/923322352945?text=${encodeURIComponent(whatsappText)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-4 rounded-full font-bold transition-all hover:scale-105 shadow-lg"

@@ -124,7 +124,7 @@ export default function Footer() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/923313954965?text=Assalamualaikum!%20I%20need%20help"
+        href="https://wa.me/923322352945?text=Assalamualaikum!%20I%20need%20help"
         target="_blank"
         className="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-transform animate-bounce-slow hover:animate-none z-50">
         <svg fill="none" viewBox="0 0 360 362">
