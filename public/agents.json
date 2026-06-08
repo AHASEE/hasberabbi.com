@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ai-txt.org/schema/agents.json",
+  "name": "Hasb-e-Rabbi Travels & Tours",
+  "description": "Premium and Economy Hajj & Umrah Packages 2026 from Pakistan, including Haramain train booking guides and visa services.",
+  "url": "https://hasberabbi.com",
+  "aiTxtUrl": "https://hasberabbi.com/llm.txt",
+  "contact": {
+    "phone": "+923322352945",
+    "email": "haseebclubi33@gmail.com"
+  }
+}
