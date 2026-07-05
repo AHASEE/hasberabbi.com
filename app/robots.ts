@@ -15,39 +15,62 @@ export default function robots() {
           '/register/',
         ],
       },
-      // AI Crawlers - Explicitly Allowed
+      // ——— OPENAI ———
       {
-        userAgent: 'GPTBot',
+        userAgent: 'GPTBot', // training crawler
         allow: ['/'],
       },
       {
-        userAgent: 'ChatGPT-User',
+        userAgent: 'ChatGPT-User', // live browse when a user shares/asks about a URL
         allow: ['/'],
       },
       {
-        userAgent: 'Google-Extended',
+        userAgent: 'OAI-SearchBot', // powers ChatGPT search citations — different from GPTBot
+        allow: ['/'],
+      },
+      // ——— ANTHROPIC (Claude) ———
+      {
+        userAgent: 'ClaudeBot', // main crawler (replaces deprecated anthropic-ai / claude-web)
         allow: ['/'],
       },
       {
-        userAgent: 'ClaudeBot',
+        userAgent: 'Claude-User', // live fetch during a Claude conversation
         allow: ['/'],
       },
       {
-        userAgent: 'anthropic-ai',
+        userAgent: 'Claude-SearchBot', // powers Claude's search/citation feature
         allow: ['/'],
       },
+      // ——— GOOGLE ———
+      {
+        userAgent: 'Google-Extended', // Gemini / Vertex AI training opt-in
+        allow: ['/'],
+      },
+      // ——— PERPLEXITY ———
       {
         userAgent: 'PerplexityBot',
         allow: ['/'],
       },
       {
-        userAgent: 'Grok',
+        userAgent: 'Perplexity-User',
         allow: ['/'],
       },
+      // ——— APPLE ———
       {
-        userAgent: 'xAI-Bot',
+        userAgent: 'Applebot-Extended', // Apple Intelligence training
         allow: ['/'],
       },
+      // ——— AMAZON ———
+      {
+        userAgent: 'Amazonbot', // Alexa / Amazon AI answers
+        allow: ['/'],
+      },
+      // ——— META ———
+      {
+        userAgent: 'Meta-ExternalAgent', // Meta AI training + indexing
+        allow: ['/'],
+      },
+      // ——— COMMON CRAWL (feeds many open-source & commercial models) ———
       {
         userAgent: 'CCBot',
         allow: ['/'],

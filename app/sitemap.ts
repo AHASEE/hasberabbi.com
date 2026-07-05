@@ -1,6 +1,10 @@
 import { prisma } from '@/lib/db';
 import { MetadataRoute } from 'next';
 
+// 👇 Yeh line add ki hai — ab sitemap har 1 ghante (3600 seconds) mein
+// khud revalidate/regenerate hogi, bina naye deploy ke bhi naye blogs aa jayenge.
+export const revalidate = 3600;
+
 const visaCountrySlugs = [
   'saudi-arabia',
   'uae-dubai',
@@ -64,13 +68,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
 
-    // ✅ Manually added blog
-    {
-      url: 'https://hasberabbi.com/blog/complete-guide-to-haramain-high-speed-railway-hhr-train-fares-2026',
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
+    // ❌ Manually added blog entry REMOVE kar diya — yeh already blogUrls
+    // (dynamic Prisma query) se aa raha tha, isliye duplicate ban raha tha.
 
     // ✅ Umrah & Hajj pages
     {
@@ -97,7 +96,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Visa country detail pages
     ...visaCountryUrls,
 
-    // ✅ Dynamic blog posts
+    // ✅ Dynamic blog posts (DB se saare published posts, koi limit nahi)
     ...blogUrls,
   ];
 }
