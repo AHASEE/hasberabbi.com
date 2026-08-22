@@ -86,6 +86,9 @@ export default function Header() {
               <Link href="/hajj-packages" className="text-gray-700 hover:text-primary font-medium transition whitespace-nowrap">
                 Hajj Packages
               </Link>
+              <Link href="/tour-packages/islamabad" className="text-gray-700 hover:text-primary font-medium transition whitespace-nowrap">
+                Tour Packages
+              </Link>
 
               {/* Visa Dropdown */}
               <div
@@ -157,6 +160,9 @@ export default function Header() {
               </Link>
               <Link href="/hajj-packages" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
                 Hajj Packages
+              </Link>
+              <Link href="/tour-packages/islamabad" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
+                Tour Packages
               </Link>
 
               {/* Mobile Visa Dropdown */}
