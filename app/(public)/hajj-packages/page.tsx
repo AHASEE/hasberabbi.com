@@ -199,7 +199,7 @@ export default function HajjPage() {
               Limited government quota available. Book now!
             </p>
             
-            <a  href="https://wa.me/923313954965?text=Apply%20Hajj%202026"
+            <a  href="https://wa.me/923322352945?text=Apply%20Hajj%202026"
               target="_blank"
               className="inline-block bg-accent hover:bg-accent-hover text-primary-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all"
             >

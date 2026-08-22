@@ -57,7 +57,7 @@ export default function ContactPage() {
               </div>
 
               {/* WhatsApp Button */}
-              <a href="https://wa.me/92332352945?text=Assalamualaikum please give me umrah package information! "
+              <a href="https://wa.me/923322352945?text=Assalamualaikum please give me umrah package information! "
                 className="mt-8 inline-block bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition">
                 💬 WhatsApp 24/7
               </a>

@@ -68,9 +68,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
 
-    // ❌ Manually added blog entry REMOVE kar diya — yeh already blogUrls
-    // (dynamic Prisma query) se aa raha tha, isliye duplicate ban raha tha.
-
     // ✅ Umrah & Hajj pages
     {
       url: 'https://hasberabbi.com/umrah-packages',
@@ -80,6 +77,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: 'https://hasberabbi.com/hajj-packages',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+
+    // ✅ Domestic tour packages
+    {
+      url: 'https://hasberabbi.com/tour-packages/islamabad',
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
