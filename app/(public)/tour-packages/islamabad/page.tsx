@@ -187,8 +187,8 @@ export default function IslamabadTourPackagesPage() {
           <div className="mx-auto w-full max-w-md">
             <VehicleTiltCard
               src="/vehicles/prado-black-front.jpg"
-              alt="Hasb-e-Rabbi Toyota Prado — Islamabad tour fleet"
-              label="Toyota Prado"
+              alt="Hasb-e-Rabbi Toyota Land Cruiser — Islamabad tour fleet"
+              label="Toyota Land Cruiser"
               sublabel="Available with driver — Islamabad based"
               priority
             />
@@ -284,8 +284,8 @@ export default function IslamabadTourPackagesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <VehicleTiltCard
               src="/vehicles/prado-white-front.jpg"
-              alt="Toyota Prado white — Hasb-e-Rabbi fleet"
-              label="Toyota Prado (White)"
+              alt="Toyota Prado — Hasb-e-Rabbi fleet"
+              label="Toyota Prado"
               sublabel="4x4 · Up to 5 passengers"
             />
             <VehicleTiltCard
