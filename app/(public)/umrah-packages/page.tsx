@@ -4,7 +4,7 @@ import { useState } from 'react';
 import PackageCard from '@/components/PackageCard';
 
 export default function UmrahPage() {
-  const [openFaq, setOpenFaq] = useState(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
     {
