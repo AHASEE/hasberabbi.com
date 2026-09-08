@@ -32,7 +32,7 @@ export default function Header() {
             <a href="mailto:haseebclubi33@gmail.com" className="flex items-center gap-1 hover:text-accent transition">
               ✉️ <span className="break-all">haseebclubi33@gmail.com</span>
             </a>
-            <a href="tel:+923322352945" className="flex items-center gap-1 hover:text-accent transition">
+            <a href="tel:+923212059826" className="flex items-center gap-1 hover:text-accent transition">
               📞 <span>+92 332 2352945</span>
             </a>
           </div>
@@ -133,7 +133,7 @@ export default function Header() {
                 Contact
               </Link>
               <a
-                href="tel:+923322352945"
+                href="tel:+923212059826"
                 className="bg-primary text-white px-4 py-2 rounded-full font-semibold hover:bg-primary-light transition whitespace-nowrap text-sm flex-shrink-0"
               >
                 📞 +92 332 2352945
@@ -208,7 +208,7 @@ export default function Header() {
               <Link href="/contact" className="text-gray-700 hover:text-primary font-medium" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </Link>
-              <a href="tel:+923322352945" className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-center whitespace-nowrap">
+              <a href="tel:+923212059826" className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-center whitespace-nowrap">
                 📞 +92 332 2352945
               </a>
             </nav>

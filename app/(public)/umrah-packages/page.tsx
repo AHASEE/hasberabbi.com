@@ -201,7 +201,7 @@ export default function UmrahPage() {
             Economy, Premium & VIP packages with 100% visa approval guarantee
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="https://wa.me/923322352945?text=I%20want%20Umrah%20quote"
+            <a href="https://wa.me/923212059826?text=I%20want%20Umrah%20quote"
               target="_blank"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all"
             >
@@ -237,7 +237,7 @@ export default function UmrahPage() {
             <p className="text-gray-600 mb-8 text-lg">
               Our experts are available 24/7
             </p>
-            <a href="https://wa.me/923322352945?text=Help%20me%20choose%20package"
+            <a href="https://wa.me/923212059826?text=Help%20me%20choose%20package"
               target="_blank"
               className="inline-block bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all"
             >
