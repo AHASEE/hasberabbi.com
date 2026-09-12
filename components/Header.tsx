@@ -136,7 +136,7 @@ export default function Header() {
                 href="tel:+923212059826"
                 className="bg-primary text-white px-4 py-2 rounded-full font-semibold hover:bg-primary-light transition whitespace-nowrap text-sm flex-shrink-0"
               >
-                📞 +92 332 2352945
+                📞 +92 321 2059826
               </a>
             </nav>
 
@@ -209,7 +209,7 @@ export default function Header() {
                 Contact
               </Link>
               <a href="tel:+923212059826" className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-center whitespace-nowrap">
-                📞 +92 332 2352945
+                📞 +92 321 2059826
               </a>
             </nav>
           )}

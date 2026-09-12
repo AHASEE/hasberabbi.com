@@ -145,7 +145,7 @@ const whyChooseUs = [
 ];
 
 export default function IslamabadTourPackagesPage() {
-  const waNumber = '923313954965';
+  const waNumber = '923212059826';
   const waBase = `https://wa.me/${waNumber}`;
 
   return (
@@ -172,7 +172,7 @@ export default function IslamabadTourPackagesPage() {
                 <MessageCircle size={18} className="flex-shrink-0" /> Get Quote on WhatsApp
               </a>
               <a
-                href="tel:+923313954965"
+                href="tel:+923212059826"
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-primary text-white font-bold px-5 py-3 text-sm sm:text-base rounded-full shadow-md hover:bg-primary-light transition"
               >
                 <Phone size={18} className="flex-shrink-0" /> +92 331 3954965
@@ -431,7 +431,7 @@ export default function IslamabadTourPackagesPage() {
             <MessageCircle size={18} className="flex-shrink-0" /> WhatsApp Us Now
           </a>
           <a
-            href="tel:+923313954965"
+            href="tel:+923212059826"
             className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-primary text-white font-bold px-6 py-3 rounded-full shadow-md hover:bg-primary-light transition"
           >
             <Phone size={18} className="flex-shrink-0" /> Call Now

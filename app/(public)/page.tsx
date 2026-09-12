@@ -137,7 +137,7 @@ export default function HomePage() {
                   <li>Expert Group Coordinator</li>
                   <li>24/7 Support Team</li>
                 </ul>
-                <a href="https://wa.me/923202019940?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20335,000)"
+                <a href="https://wa.me/923212059826?text=I'm%20interested%20in%20Premium%20Umrah%20Package%20(PKR%20335,000)"
                   className="btn btn-whatsapp w-full block text-center py-2 rounded bg-green-700 text-white font-semibold"
                   target="_blank" rel="noreferrer">
                   Book Premium Package
@@ -403,7 +403,7 @@ export default function HomePage() {
             Limited seats available — PKR 195,000 se shuru. Free consultation ke liye abhi contact karen!
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="https://wa.me/923313954965?text=Assalamualaikum!%20I%20want%20to%20book%20Hajj/Umrah%20package"
+            <a href="https://wa.me/923212059826?text=Assalamualaikum!%20I%20want%20to%20book%20Hajj/Umrah%20package"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all">
               💬 WhatsApp Us Now
             </a>
@@ -586,7 +586,7 @@ export default function HomePage() {
             "url": "https://hasberabbi.com",
             "logo": "https://hasberabbi.com/logo.jpg",
             "description": "Ministry of Religious Affairs approved Hajj and Umrah travel agency in Pakistan. Serving pilgrims since 2013 with 100% visa approval guarantee.",
-            "telephone": "+923313954965",
+            "telephone": "+923212059826",
             "email": "haseebclubi33@gmail.com",
             "address": {
               "@type": "PostalAddress",

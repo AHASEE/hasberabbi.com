@@ -86,8 +86,8 @@ export default function Footer() {
                 <span>Office # 202, Dolmen center, Karachi, Pakistan</span>
               </li>
               <li>
-                <a href="tel:+923313954965" className="flex items-center gap-2 transition hover:text-black/80">
-                  <span className="text-black">📞</span> +92 331 3954965
+                <a href="tel:+923212059826" className="flex items-center gap-2 transition hover:text-black/80">
+                  <span className="text-black">📞</span> +92 321 2059826
                 </a>
               </li>
               <li>
