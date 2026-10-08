@@ -41,6 +41,12 @@ const nextConfig = {
         destination: 'https://hasberabbi.com/:path*',
         permanent: true,
       },
+      // Preserve the old Haramain rates URL
+      {
+        source: '/blog/haramain-train-ticket-prices-2026-rates-table',
+        destination: '/blog/haramain-train-ticket-prices-2026-rates-table-hinglish-urduhindi',
+        permanent: true,
+      },
       // Purane redirects
       { source: '/umrah', destination: '/umrah-packages', permanent: true },
       { source: '/hajj', destination: '/hajj-packages', permanent: true },
