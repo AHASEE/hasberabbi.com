@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hasb-e-Rabbi - Hajj, Umrah & Visa Services',
     description: 'Ministry approved Hajj, Umrah and Visa services in Pakistan',
-    url: 'https://hasberabbi.com',
     siteName: 'Hasb-e-Rabbi Travels & Tours',
     locale: 'en_PK',
     type: 'website',
