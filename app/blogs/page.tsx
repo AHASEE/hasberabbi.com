@@ -1,6 +1,12 @@
 import BlogEditor from '@/components/admin/BlogEditor';
 import Link from 'next/link';
 
+// Legacy editor route is not a public article or landing page.
+export const metadata = {
+  robots: { index: false, follow: false },
+};
+
+
 export default function NewBlogPage() {
   return (
     <div>
