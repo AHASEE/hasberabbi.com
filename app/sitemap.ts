@@ -8,6 +8,7 @@ export const revalidate = 3600;
 const visaCountrySlugs = [
   'saudi-arabia',
   'uae-dubai',
+  'united-kingdom',
   'schengen-europe',
   'malaysia',
   'turkey',
@@ -32,7 +33,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 2. Visa country pages
   const visaCountryUrls = visaCountrySlugs.map((slug) => ({
     url: `https://hasberabbi.com/visa-services/${slug}`,
-    lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
@@ -41,7 +41,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Homepage
     {
       url: 'https://hasberabbi.com',
-      lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 1,
     },
@@ -49,13 +48,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Important static pages
     {
       url: 'https://hasberabbi.com/about',
-      lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
     {
       url: 'https://hasberabbi.com/contact',
-      lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
@@ -63,7 +60,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Blog listing page
     {
       url: 'https://hasberabbi.com/blog',
-      lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
@@ -71,13 +67,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Umrah & Hajj pages
     {
       url: 'https://hasberabbi.com/umrah-packages',
-      lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: 'https://hasberabbi.com/hajj-packages',
-      lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
@@ -85,7 +79,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Domestic tour packages
     {
       url: 'https://hasberabbi.com/tour-packages/islamabad',
-      lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
@@ -93,7 +86,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ✅ Visa services main page
     {
       url: 'https://hasberabbi.com/visa-services',
-      lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
