@@ -1,18 +1,19 @@
 import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/db';
+import type { Metadata } from 'next';
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: BlogPageProps) {
+export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
 
   const blog = await prisma.blog.findFirst({
-    where: { slug },
+    where: { slug, published: true },
   });
 
-  if (!blog) return {};
+  if (!blog) return { robots: { index: false, follow: false } };
 
   return {
     title: blog.metaTitle || `${blog.title} | Hasb-e-Rabbi`,
@@ -21,9 +22,13 @@ export async function generateMetadata({ params }: BlogPageProps) {
       canonical: `https://hasberabbi.com/blog/${slug}`,
     },
     openGraph: {
+      type: 'article',
+      url: `https://hasberabbi.com/blog/${slug}`,
       title: blog.metaTitle || blog.title,
       description: blog.metaDesc || blog.excerpt || '',
       images: blog.featuredImage ? [blog.featuredImage] : [],
+      publishedTime: blog.createdAt.toISOString(),
+      modifiedTime: blog.updatedAt.toISOString(),
     },
   };
 }
@@ -32,7 +37,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const { slug } = await params;
 
   const blog = await prisma.blog.findFirst({
-    where: { slug },
+    where: { slug, published: true },
     include: {
       author: {
         select: {
@@ -48,6 +53,28 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <main className="max-w-4xl mx-auto px-8 sm:px-10 md:px-12 py-10">
+      {/* Structured data mirrors the published article's visible title and dates. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: blog.title,
+            description: blog.metaDesc || blog.excerpt || blog.title,
+            mainEntityOfPage: `https://hasberabbi.com/blog/${blog.slug}`,
+            datePublished: blog.createdAt.toISOString(),
+            dateModified: blog.updatedAt.toISOString(),
+            author: { '@type': 'Person', name: blog.author?.name || 'Hasb-e-Rabbi Editorial Team' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Hasb-e-Rabbi Travels & Tours',
+              url: 'https://hasberabbi.com',
+            },
+            ...(blog.featuredImage ? { image: blog.featuredImage } : {}),
+          }).replace(/</g, '\\u003c'),
+        }}
+      />
       {/* Featured Image */}
       {blog.featuredImage && (
         <img
