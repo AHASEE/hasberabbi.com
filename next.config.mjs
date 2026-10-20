@@ -47,6 +47,12 @@ const nextConfig = {
         destination: '/blog/haramain-train-ticket-prices-2026-rates-table-hinglish-urduhindi',
         permanent: true,
       },
+      // Fix previously shared non-canonical Solo Female Umrah links.
+      {
+        source: '/solo-female-umrah-from-pakistan-2026',
+        destination: '/blog/solo-female-umrah-from-pakistan-2026',
+        permanent: true,
+      },
       // Purane redirects
       { source: '/umrah', destination: '/umrah-packages', permanent: true },
       { source: '/hajj', destination: '/hajj-packages', permanent: true },
