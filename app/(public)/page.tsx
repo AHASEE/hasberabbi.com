@@ -3,6 +3,12 @@ import React from "react";
 import Image from 'next/image'
 import "../../app/(public)/style.css"
 import Link from "next/link";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://hasberabbi.com/' },
+};
+
 export default function HomePage() {
   return (
     <main>
