@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://hasberabbi.com/' },
+  openGraph: { url: 'https://hasberabbi.com/' },
 };
 
 export default function HomePage() {
