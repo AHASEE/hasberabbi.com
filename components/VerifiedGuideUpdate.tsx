@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 
 const HARAMAIN_GUIDES = new Set([
   'complete-guide-to-haramain-high-speed-railway-hhr-train-fares-2026',
@@ -24,7 +25,6 @@ export function improveGuideHtml(slug: string, html: string) {
   if (!isReviewedGuide(slug)) return html;
 
   let updated = html
-    .replace(/<(\/? )h1(?=\s|>)/gi, '<$1h2')
     .replace(/<(\/?)h1(?=\s|>)/gi, '<$1h2')
     .replace(/<h([2-6])\b[^>]*>\s*(?:&nbsp;\s*)*<\/h\1>/gi, '');
 
@@ -43,7 +43,7 @@ export function improveGuideHtml(slug: string, html: string) {
 
 const sourceClass = 'font-semibold text-emerald-800 underline underline-offset-4 hover:text-emerald-950';
 
-function SourceLink({ href, children }: { href: string; children: React.ReactNode }) {
+function SourceLink({ href, children }: { href: string; children: ReactNode }) {
   return <a className={sourceClass} href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
 }
 
