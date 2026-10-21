@@ -7,6 +7,25 @@ import VerifiedGuideUpdate, {
   improveGuideHtml,
 } from '@/components/VerifiedGuideUpdate';
 
+const verifiedSeo: Record<string, { title: string; description: string }> = {
+  'hajj-2027-registration-dates-cost-guide': {
+    title: 'Hajj 2027 Pakistan: Registration and Payment Updates',
+    description: 'Hajj 2027 registration began on 22 June 2026. See updated official government and private scheme guidance, payment notices and the Pak Hajj portal.',
+  },
+  'solo-female-umrah-from-pakistan-2026': {
+    title: 'Solo Female Umrah from Pakistan 2026: Visa, Nusuk and Travel Guide',
+    description: 'Saudi rules allow women to perform Umrah without a mahram. Check Pakistani passport visa eligibility, Nusuk requirements and solo travel planning tips.',
+  },
+  'complete-guide-to-haramain-high-speed-railway-hhr-train-fares-2026': {
+    title: 'Haramain Train Fares 2026: Routes, Timetables and Official Booking',
+    description: 'Plan Haramain high-speed railway travel between Makkah, Madinah and Jeddah with route guidance, official live ticket checks and baggage information.',
+  },
+  'haramain-train-ticket-prices-2026-rates-table-hinglish-urduhindi': {
+    title: 'Haramain Train Tickets 2026: Route Fares and Booking Guide',
+    description: 'Haramain train routes explained in Roman Urdu and English. Find official live booking and timetable links; older SAR price estimates can change.',
+  },
+};
+
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
 }
@@ -21,16 +40,16 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   if (!blog) return { robots: { index: false, follow: false } };
 
   return {
-    title: blog.metaTitle || `${blog.title} | Hasb-e-Rabbi`,
-    description: blog.metaDesc || blog.excerpt || blog.title,
+    title: verifiedSeo[slug]?.title || blog.metaTitle || `${blog.title} | Hasb-e-Rabbi`,
+    description: verifiedSeo[slug]?.description || blog.metaDesc || blog.excerpt || blog.title,
     alternates: {
       canonical: `https://hasberabbi.com/blog/${slug}`,
     },
     openGraph: {
       type: 'article',
       url: `https://hasberabbi.com/blog/${slug}`,
-      title: blog.metaTitle || blog.title,
-      description: blog.metaDesc || blog.excerpt || '',
+      title: verifiedSeo[slug]?.title || blog.metaTitle || blog.title,
+      description: verifiedSeo[slug]?.description || blog.metaDesc || blog.excerpt || '',
       images: blog.featuredImage ? [blog.featuredImage] : [],
       publishedTime: blog.createdAt.toISOString(),
       modifiedTime: isReviewedGuide(slug) ? GUIDE_REVIEW_DATE : blog.updatedAt.toISOString(),
@@ -65,8 +84,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
-            headline: blog.title,
-            description: blog.metaDesc || blog.excerpt || blog.title,
+            headline: verifiedSeo[slug]?.title || blog.title,
+            description: verifiedSeo[slug]?.description || blog.metaDesc || blog.excerpt || blog.title,
             mainEntityOfPage: `https://hasberabbi.com/blog/${blog.slug}`,
             datePublished: blog.createdAt.toISOString(),
             dateModified: isReviewedGuide(slug) ? GUIDE_REVIEW_DATE : blog.updatedAt.toISOString(),
@@ -91,7 +110,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
       {/* Title */}
       <h1 className="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">
-        {blog.title}
+        {verifiedSeo[slug]?.title || blog.title}
       </h1>
 
       {/* Author & Date */}
