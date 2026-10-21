@@ -1,6 +1,11 @@
 import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/db';
 import type { Metadata } from 'next';
+import VerifiedGuideUpdate, {
+  GUIDE_REVIEW_DATE,
+  isReviewedGuide,
+  improveGuideHtml,
+} from '@/components/VerifiedGuideUpdate';
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
@@ -28,7 +33,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       description: blog.metaDesc || blog.excerpt || '',
       images: blog.featuredImage ? [blog.featuredImage] : [],
       publishedTime: blog.createdAt.toISOString(),
-      modifiedTime: blog.updatedAt.toISOString(),
+      modifiedTime: isReviewedGuide(slug) ? GUIDE_REVIEW_DATE : blog.updatedAt.toISOString(),
     },
   };
 }
@@ -64,7 +69,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             description: blog.metaDesc || blog.excerpt || blog.title,
             mainEntityOfPage: `https://hasberabbi.com/blog/${blog.slug}`,
             datePublished: blog.createdAt.toISOString(),
-            dateModified: blog.updatedAt.toISOString(),
+            dateModified: isReviewedGuide(slug) ? GUIDE_REVIEW_DATE : blog.updatedAt.toISOString(),
             author: { '@type': 'Person', name: blog.author?.name || 'Hasb-e-Rabbi Editorial Team' },
             publisher: {
               '@type': 'Organization',
@@ -103,6 +108,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
         </span>
       </div>
 
+      <VerifiedGuideUpdate slug={slug} />
+
       {/* Blog Content */}
       <div className="w-full min-w-0 overflow-x-auto">
         <article
@@ -133,7 +140,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             prose-ol:pl-8
             prose-li:my-1
           "
-          dangerouslySetInnerHTML={{ __html: blog.content }}
+          dangerouslySetInnerHTML={{ __html: improveGuideHtml(slug, blog.content) }}
         />
       </div>
     </main>
